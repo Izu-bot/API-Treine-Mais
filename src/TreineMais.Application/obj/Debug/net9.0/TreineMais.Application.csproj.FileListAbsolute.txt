@@ -1,0 +1,15 @@
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/bin/Debug/net9.0/TreineMais.Application.deps.json
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/bin/Debug/net9.0/TreineMais.Application.dll
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/bin/Debug/net9.0/TreineMais.Application.pdb
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/bin/Debug/net9.0/TreineMais.Domain.dll
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/bin/Debug/net9.0/TreineMais.Domain.pdb
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/obj/Debug/net9.0/TreineMais.Application.csproj.AssemblyReference.cache
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/obj/Debug/net9.0/TreineMais.Application.GeneratedMSBuildEditorConfig.editorconfig
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/obj/Debug/net9.0/TreineMais.Application.AssemblyInfoInputs.cache
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/obj/Debug/net9.0/TreineMais.Application.AssemblyInfo.cs
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/obj/Debug/net9.0/TreineMais.Application.csproj.CoreCompileInputs.cache
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/obj/Debug/net9.0/TreineMa.6FD36FB5.Up2Date
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/obj/Debug/net9.0/TreineMais.Application.dll
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/obj/Debug/net9.0/refint/TreineMais.Application.dll
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/obj/Debug/net9.0/TreineMais.Application.pdb
+/home/kauan/RiderProjects/TreineMais/TreineMais.Application/obj/Debug/net9.0/ref/TreineMais.Application.dll

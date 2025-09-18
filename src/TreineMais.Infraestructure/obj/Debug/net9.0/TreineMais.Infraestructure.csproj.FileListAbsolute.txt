@@ -1,0 +1,17 @@
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/bin/Debug/net9.0/TreineMais.Infraestructure.deps.json
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/bin/Debug/net9.0/TreineMais.Infraestructure.dll
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/bin/Debug/net9.0/TreineMais.Infraestructure.pdb
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/bin/Debug/net9.0/TreineMais.Application.dll
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/bin/Debug/net9.0/TreineMais.Domain.dll
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/bin/Debug/net9.0/TreineMais.Application.pdb
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/bin/Debug/net9.0/TreineMais.Domain.pdb
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/obj/Debug/net9.0/TreineMais.Infraestructure.csproj.AssemblyReference.cache
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/obj/Debug/net9.0/TreineMais.Infraestructure.GeneratedMSBuildEditorConfig.editorconfig
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/obj/Debug/net9.0/TreineMais.Infraestructure.AssemblyInfoInputs.cache
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/obj/Debug/net9.0/TreineMais.Infraestructure.AssemblyInfo.cs
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/obj/Debug/net9.0/TreineMais.Infraestructure.csproj.CoreCompileInputs.cache
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/obj/Debug/net9.0/TreineMa.E1E683E1.Up2Date
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/obj/Debug/net9.0/TreineMais.Infraestructure.dll
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/obj/Debug/net9.0/refint/TreineMais.Infraestructure.dll
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/obj/Debug/net9.0/TreineMais.Infraestructure.pdb
+/home/kauan/RiderProjects/TreineMais/TreineMais.Infraestructure/obj/Debug/net9.0/ref/TreineMais.Infraestructure.dll
