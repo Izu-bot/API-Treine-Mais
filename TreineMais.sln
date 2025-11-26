@@ -6,7 +6,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreineMais.Domain", "src\Tr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreineMais.Application", "src\TreineMais.Application\TreineMais.Application.csproj", "{B729A4A2-3F48-48AE-8691-FFCCFC7DCA6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreineMais.Infraestructure", "src\TreineMais.Infraestructure\TreineMais.Infraestructure.csproj", "{AC8A0392-572F-40A2-A865-E093CA439007}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreineMais.Infrastructure", "src\TreineMais.Infrastructure\TreineMais.Infrastructure.csproj", "{AC8A0392-572F-40A2-A865-E093CA439007}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05-4346-4AA6-1389-037BE0695223}"
 EndProject

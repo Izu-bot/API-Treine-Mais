@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("TreineMais.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+afa4d70fd2bc38f67d0efddb85ba1c6a288a35d3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9cdda264c33801558307a6e9dec06cff31d584c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("TreineMais.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("TreineMais.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

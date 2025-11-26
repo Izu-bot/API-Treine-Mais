@@ -5,14 +5,14 @@ namespace TreineMais.Domain.Entity;
 public class Exercise
 {
     public int  Id { get; private set; }
-    public int UserId { get; private set; }
+    public Guid UserId { get; private set; }
     public string Name { get; private set; } = null!;
     public string Description { get; private set; } = null!;
-    public Category Category { get; private set; } = null!;
+    public string Category { get; private set; } = null!;
     
     private Exercise() { }
 
-    public Exercise(int userId, string name, string description, Category category)
+    public Exercise(Guid userId, string name, string description, string category)
     {
         UserId = userId;
         Name = name;
@@ -30,5 +30,5 @@ public class Exercise
     
     public void UpdateDescription(string? description) => Description = description ?? string.Empty;
 
-    public void UpdateCategory(Category category) => Category = category ?? throw new InvalidOperationException("Category cannot be null.");
+    public void UpdateCategory(string category) => Category = category ?? throw new InvalidOperationException("Category cannot be null.");
 }

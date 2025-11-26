@@ -5,7 +5,7 @@ namespace TreineMais.Domain.Entity;
 public class Training
 {
     public int Id { get; private set; }
-    public int UserId { get; private set; } 
+    public Guid UserId { get; private set; } 
     public string Name { get; private set; } = null!;
     public string? Description { get; private set; }
     public DateTime Date { get; private set; }
@@ -15,7 +15,7 @@ public class Training
     
     private Training() { }
 
-    public Training(int userId, string name, string description, DateTime date)
+    public Training(Guid userId, string name, string description, DateTime date)
     {
         UserId = userId;
         Name = name;

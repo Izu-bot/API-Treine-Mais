@@ -4,7 +4,7 @@ namespace TreineMais.Domain.ValueObject;
 
 public class Weight
 {
-    private float Value { get; }
+    public float Value { get; }
 
     public Weight(float value)
     {

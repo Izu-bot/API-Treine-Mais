@@ -1,12 +1,1 @@
-{
-  "Version": 1,
-  "Hash": "l+jEiqStGN8TlpY3E6CNcjHL/0n3Cfzi78AHPvYKVj4=",
-  "Source": "TreineMais.API",
-  "BasePath": "_content/TreineMais.API",
-  "Mode": "Default",
-  "ManifestType": "Build",
-  "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
-  "Assets": [],
-  "Endpoints": []
-}
+{"Version":1,"Hash":"qHIwOaaCaQCduEx8NJ7ttZegzja2r5VhevSMeKN99Hw=","Source":"TreineMais.API","BasePath":"/","Mode":"Root","ManifestType":"Build","ReferencedProjectsConfiguration":[],"DiscoveryPatterns":[],"Assets":[],"Endpoints":[]}

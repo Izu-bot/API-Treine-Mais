@@ -5,7 +5,7 @@ namespace TreineMais.Domain.Entity;
 public class Routine
 {
     public int Id { get; private set; }
-    public int UserId { get; private set; }
+    public Guid UserId { get; private set; }
     public string Name { get; private set; }
     public string? Description { get; private set; }
     private readonly List<Training> _trainings = new();
@@ -13,7 +13,7 @@ public class Routine
     
     private Routine() { }
 
-    public Routine(int userId, string name, string? description = null)
+    public Routine(Guid userId, string name, string? description = null)
     {
         UserId = userId;
         Name = name;

@@ -4,7 +4,7 @@ namespace TreineMais.Domain.ValueObject;
 
 public class Height
 {
-    private float Value { get; }
+    public float Value { get; }
 
     public Height(float value)
     {

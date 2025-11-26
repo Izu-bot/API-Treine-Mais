@@ -32,11 +32,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Application/TreineMais.Application.csproj",
+      "projectUniqueName": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj",
       "projectName": "TreineMais.Application",
-      "projectPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Application/TreineMais.Application.csproj",
+      "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj",
       "packagesPath": "/home/kauan/.nuget/packages/",
-      "outputPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Application/obj/",
+      "outputPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/kauan/.nuget/NuGet/NuGet.Config"
@@ -51,8 +51,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
-              "projectPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Domain/TreineMais.Domain.csproj"
+            "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
+              "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj"
             }
           }
         }
@@ -67,7 +67,7 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.200"
+      "SdkAnalysisLevel": "10.0.100"
     },
     "frameworks": {
       "net9.0": {
@@ -83,12 +83,22 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[9.0.11, 9.0.11]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[9.0.11, 9.0.11]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kauan/RiderProjects/TreineMais/src/TreineMais.API/TreineMais.API.csproj": {}
+    "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.API/TreineMais.API.csproj": {}
   },
   "projects": {
-    "/home/kauan/RiderProjects/TreineMais/src/TreineMais.API/TreineMais.API.csproj": {
+    "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.API/TreineMais.API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.API/TreineMais.API.csproj",
+        "projectUniqueName": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.API/TreineMais.API.csproj",
         "projectName": "TreineMais.API",
-        "projectPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.API/TreineMais.API.csproj",
+        "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.API/TreineMais.API.csproj",
         "packagesPath": "/home/kauan/.nuget/packages/",
-        "outputPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.API/obj/",
+        "outputPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.API/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kauan/.nuget/NuGet/NuGet.Config"
@@ -26,14 +26,14 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Application/TreineMais.Application.csproj": {
-                "projectPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Application/TreineMais.Application.csproj"
+              "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj": {
+                "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj"
               },
-              "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
-                "projectPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Domain/TreineMais.Domain.csproj"
+              "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
+                "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj"
               },
-              "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Infraestructure/TreineMais.Infraestructure.csproj": {
-                "projectPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Infraestructure/TreineMais.Infraestructure.csproj"
+              "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Infrastructure/TreineMais.Infrastructure.csproj": {
+                "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Infrastructure/TreineMais.Infrastructure.csproj"
               }
             }
           }
@@ -48,12 +48,16 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
           "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[9.0.2, )"
@@ -70,6 +74,20 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Host.linux-x64",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.AspNetCore.App": {
               "privateAssets": "none"
@@ -78,18 +96,18 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Application/TreineMais.Application.csproj": {
+    "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Application/TreineMais.Application.csproj",
+        "projectUniqueName": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj",
         "projectName": "TreineMais.Application",
-        "projectPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Application/TreineMais.Application.csproj",
+        "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj",
         "packagesPath": "/home/kauan/.nuget/packages/",
-        "outputPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Application/obj/",
+        "outputPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kauan/.nuget/NuGet/NuGet.Config"
@@ -104,8 +122,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
-                "projectPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Domain/TreineMais.Domain.csproj"
+              "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
+                "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj"
               }
             }
           }
@@ -120,7 +138,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -136,23 +154,33 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
+    "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Domain/TreineMais.Domain.csproj",
+        "projectUniqueName": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
         "projectName": "TreineMais.Domain",
-        "projectPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Domain/TreineMais.Domain.csproj",
+        "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
         "packagesPath": "/home/kauan/.nuget/packages/",
-        "outputPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Domain/obj/",
+        "outputPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kauan/.nuget/NuGet/NuGet.Config"
@@ -179,7 +207,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
@@ -195,23 +223,33 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Infraestructure/TreineMais.Infraestructure.csproj": {
+    "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Infrastructure/TreineMais.Infrastructure.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Infraestructure/TreineMais.Infraestructure.csproj",
-        "projectName": "TreineMais.Infraestructure",
-        "projectPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Infraestructure/TreineMais.Infraestructure.csproj",
+        "projectUniqueName": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Infrastructure/TreineMais.Infrastructure.csproj",
+        "projectName": "TreineMais.Infrastructure",
+        "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Infrastructure/TreineMais.Infrastructure.csproj",
         "packagesPath": "/home/kauan/.nuget/packages/",
-        "outputPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Infraestructure/obj/",
+        "outputPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Infrastructure/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kauan/.nuget/NuGet/NuGet.Config"
@@ -226,11 +264,11 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Application/TreineMais.Application.csproj": {
-                "projectPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Application/TreineMais.Application.csproj"
+              "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj": {
+                "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj"
               },
-              "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
-                "projectPath": "/home/kauan/RiderProjects/TreineMais/src/TreineMais.Domain/TreineMais.Domain.csproj"
+              "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
+                "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj"
               }
             }
           }
@@ -245,11 +283,31 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.200"
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "DotNetEnv": {
+              "target": "Package",
+              "version": "[3.1.1, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -261,12 +319,22 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
+          "downloadDependencies": [
+            {
+              "name": "Microsoft.AspNetCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            },
+            {
+              "name": "Microsoft.NETCore.App.Ref",
+              "version": "[9.0.11, 9.0.11]"
+            }
+          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

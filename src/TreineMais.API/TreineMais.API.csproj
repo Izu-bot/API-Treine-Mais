@@ -7,13 +7,14 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2"/>
+        <PackageReference Include="DotNetEnv" Version="3.1.1" />
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
     </ItemGroup>
 
     <ItemGroup>
       <ProjectReference Include="..\TreineMais.Application\TreineMais.Application.csproj" />
       <ProjectReference Include="..\TreineMais.Domain\TreineMais.Domain.csproj" />
-      <ProjectReference Include="..\TreineMais.Infraestructure\TreineMais.Infraestructure.csproj" />
+      <ProjectReference Include="..\TreineMais.Infrastructure\TreineMais.Infrastructure.csproj" />
     </ItemGroup>
 
 </Project>

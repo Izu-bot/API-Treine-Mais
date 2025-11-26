@@ -8,6 +8,8 @@ public class Login
 {
     public Email Email { get; private set; }
     public Password Password { get; private set; }
+    
+    private Login() { }
 
     public Login(Email email, Password password)
     {
@@ -18,7 +20,7 @@ public class Login
 
 public class Email
 {
-    private string Value { get; }
+    public string Value { get; }
 
     public Email(string value)
     {
@@ -46,7 +48,7 @@ public class Email
 
 public class Password
 {
-    private string Value { get; }
+    public string Value { get; }
 
     public Password(string value)
     {

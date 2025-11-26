@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "perHceRH+wE=",
+  "dgSpecHash": "f9fKzx/lYjc=",
   "success": true,
-  "projectFilePath": "/home/kauan/RiderProjects/TreineMais/tests/TreineMais.UnitTests/TreineMais.UnitTests.csproj",
+  "projectFilePath": "/home/kauan/RiderProjects/API-Treine-Mais/tests/TreineMais.UnitTests/TreineMais.UnitTests.csproj",
   "expectedPackageFiles": [
     "/home/kauan/.nuget/packages/coverlet.collector/6.0.2/coverlet.collector.6.0.2.nupkg.sha512",
     "/home/kauan/.nuget/packages/microsoft.codecoverage/17.12.0/microsoft.codecoverage.17.12.0.nupkg.sha512",
@@ -18,7 +18,9 @@
     "/home/kauan/.nuget/packages/xunit.core/2.9.2/xunit.core.2.9.2.nupkg.sha512",
     "/home/kauan/.nuget/packages/xunit.extensibility.core/2.9.2/xunit.extensibility.core.2.9.2.nupkg.sha512",
     "/home/kauan/.nuget/packages/xunit.extensibility.execution/2.9.2/xunit.extensibility.execution.2.9.2.nupkg.sha512",
-    "/home/kauan/.nuget/packages/xunit.runner.visualstudio/2.8.2/xunit.runner.visualstudio.2.8.2.nupkg.sha512"
+    "/home/kauan/.nuget/packages/xunit.runner.visualstudio/2.8.2/xunit.runner.visualstudio.2.8.2.nupkg.sha512",
+    "/home/kauan/.nuget/packages/microsoft.netcore.app.ref/9.0.11/microsoft.netcore.app.ref.9.0.11.nupkg.sha512",
+    "/home/kauan/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.11/microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512"
   ],
   "logs": []
 }

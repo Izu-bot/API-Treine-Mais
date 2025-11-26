@@ -23,7 +23,7 @@ public class UserTests
         
         Height height = new(1.75f);
         Weight weight = new(80.5f);
-        Profile profile = new("Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
+        Profile profile = new(Guid.NewGuid(), "Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
         
         User newUser = new(profile,  login);
         
@@ -39,7 +39,7 @@ public class UserTests
         
         Height height = new(1.75f);
         Weight weight = new(80.5f);
-        Profile profile = new("Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
+        Profile profile = new(Guid.NewGuid(),"Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
         
         User newUser = new(profile,  login);
         
@@ -58,12 +58,12 @@ public class UserTests
         
         Height height = new(1.75f);
         Weight weight = new(80.5f);
-        Profile profile = new("Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
+        Profile profile = new(Guid.NewGuid(),"Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
         
         User newUser = new(profile, login);
         
         Weight newWeight = new(70.87f);
-        Profile newProfile = new("Kauan", Gender.Male, DateTime.Now, height, newWeight, "Ficar mais rapido");
+        Profile newProfile = new(Guid.NewGuid(),"Kauan", Gender.Male, DateTime.Now, height, newWeight, "Ficar mais rapido");
         newUser.UpdateProfile(newProfile);
         
         Assert.NotNull(newUser);
@@ -78,7 +78,7 @@ public class UserTests
         
         Height height = new(1.75f);
         Weight weight = new(80.5f);
-        Profile profile = new("Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
+        Profile profile = new(Guid.NewGuid(),"Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
         
         User newUser = new(profile, login);
 
@@ -100,7 +100,7 @@ public class UserTests
         
         Height height = new(1.75f);
         Weight weight = new(80.5f);
-        Profile profile = new("Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
+        Profile profile = new(Guid.NewGuid(),"Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
         
         User newUser = new(profile, login);
 
@@ -120,7 +120,7 @@ public class UserTests
         
         Height height = new(1.75f);
         Weight weight = new(80.5f);
-        Profile profile = new("Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
+        Profile profile = new(Guid.NewGuid(),"Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
         
         User newUser = new(profile, login);
         
@@ -140,7 +140,7 @@ public class UserTests
         
         Height height = new(1.75f);
         Weight weight = new(80.5f);
-        Profile profile = new("Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
+        Profile profile = new(Guid.NewGuid(),"Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
         
         User newUser = new(profile, login);
         
@@ -160,7 +160,7 @@ public class UserTests
         
         Height height = new(1.75f);
         Weight weight = new(80.5f);
-        Profile profile = new("Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
+        Profile profile = new(Guid.NewGuid(),"Kauan", Gender.Male, DateTime.Now, height, weight, "Ficar forte");
         
         User newUser = new(profile, login);
 

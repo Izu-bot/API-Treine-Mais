@@ -9,7 +9,10 @@ public class User
     public DateTime CreatedAt { get; private set; }
     public Profile Profile { get; private set; } = null!;
     public Login Login { get; private set; } = null!;
-
+    public ICollection<Exercise> Exercises { get; private set; } = new List<Exercise>();
+    public ICollection<Training> Trainings { get; private set; } = new List<Training>();
+    public ICollection<Routine> Routines { get; private set; } = new List<Routine>();
+    
     private User() { }
 
     public User(Profile profile, Login login)
