@@ -15,13 +15,12 @@ public class User
     
     private User() { }
 
-    public User(Profile profile, Login login)
+    public User(Login login)
     {
         Id = Guid.CreateVersion7();
-        Profile = profile ?? throw new ArgumentNullException(nameof(profile));
         Login = login ??  throw new ArgumentNullException(nameof(login));
         Active = true;
-        CreatedAt = DateTime.Now;
+        CreatedAt = DateTime.UtcNow;
     }
     
     public void ActivateUser() => Active = true;

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj": {}
+    "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj": {}
   },
   "projects": {
-    "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj": {
+    "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj",
+        "projectUniqueName": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj",
         "projectName": "TreineMais.Application",
-        "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj",
+        "projectPath": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj",
         "packagesPath": "/home/kauan/.nuget/packages/",
-        "outputPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/obj/",
+        "outputPath": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Application/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kauan/.nuget/NuGet/NuGet.Config"
@@ -26,8 +26,8 @@
           "net9.0": {
             "targetAlias": "net9.0",
             "projectReferences": {
-              "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
-                "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj"
+              "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
+                "projectPath": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj"
               }
             }
           }
@@ -47,6 +47,20 @@
       "frameworks": {
         "net9.0": {
           "targetAlias": "net9.0",
+          "dependencies": {
+            "MediatR": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "MediatR.Extensions.Microsoft.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection": {
+              "target": "Package",
+              "version": "[10.0.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -77,14 +91,14 @@
         }
       }
     },
-    "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
+    "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
+        "projectUniqueName": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
         "projectName": "TreineMais.Domain",
-        "projectPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
+        "projectPath": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
         "packagesPath": "/home/kauan/.nuget/packages/",
-        "outputPath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/obj/",
+        "outputPath": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kauan/.nuget/NuGet/NuGet.Config"

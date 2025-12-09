@@ -1,9 +1,14 @@
 {
   "version": 2,
-  "dgSpecHash": "Zz/1YlbjHH8=",
+  "dgSpecHash": "uRFI/bAtMv4=",
   "success": true,
-  "projectFilePath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj",
+  "projectFilePath": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj",
   "expectedPackageFiles": [
+    "/home/kauan/.nuget/packages/mediatr/10.0.0/mediatr.10.0.0.nupkg.sha512",
+    "/home/kauan/.nuget/packages/mediatr.contracts/1.0.0/mediatr.contracts.1.0.0.nupkg.sha512",
+    "/home/kauan/.nuget/packages/mediatr.extensions.microsoft.dependencyinjection/10.0.0/mediatr.extensions.microsoft.dependencyinjection.10.0.0.nupkg.sha512",
+    "/home/kauan/.nuget/packages/microsoft.extensions.dependencyinjection/10.0.0/microsoft.extensions.dependencyinjection.10.0.0.nupkg.sha512",
+    "/home/kauan/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/10.0.0/microsoft.extensions.dependencyinjection.abstractions.10.0.0.nupkg.sha512",
     "/home/kauan/.nuget/packages/microsoft.netcore.app.ref/9.0.11/microsoft.netcore.app.ref.9.0.11.nupkg.sha512",
     "/home/kauan/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.11/microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512"
   ],

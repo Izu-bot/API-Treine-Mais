@@ -6,7 +6,7 @@ public class Routine
 {
     public int Id { get; private set; }
     public Guid UserId { get; private set; }
-    public string Name { get; private set; }
+    public string Name { get; private set; } = string.Empty;
     public string? Description { get; private set; }
     private readonly List<Training> _trainings = new();
     public IReadOnlyList<Training> Trainings => _trainings.AsReadOnly();

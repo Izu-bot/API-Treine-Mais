@@ -5,9 +5,9 @@ namespace TreineMais.Domain.Abstractions;
 
 public interface IUserRepository
 {
-    Task CreateUserAsync(User user);
-    Task UpdateUserAsync(User user);
-    Task DeleteUserAsync(User user);
-    Task<User?> GetUserByIdAsync(Guid id);
-    Task<User?> GetUserByEmailAsync(Email email);
+    Task CreateAsync(User user);
+    Task UpdateAsync(User user);
+    Task DeleteAsync(User user);
+    Task<User?> GetByIdAsync(Guid id);
+    Task<User?> GetByEmailAsync(Email email);
 }

@@ -12,7 +12,12 @@ internal class UserTypeConfiguration : IEntityTypeConfiguration<User>
         builder.HasKey(u => u.Id);
         builder.Property(u => u.Active)
             .HasDefaultValue(true);
-        builder.Property(u => u.CreatedAt).IsRequired();
+        builder.Property(u => u.CreatedAt)
+            .HasConversion(
+                v => v.ToUniversalTime(),
+                v => DateTime.SpecifyKind(v, DateTimeKind.Utc)
+            );
+
         builder.ComplexProperty(u => u.Login, loginBuilder =>
         {
             loginBuilder.ComplexProperty(l => l.Email, emailBuilder =>
@@ -27,9 +32,10 @@ internal class UserTypeConfiguration : IEntityTypeConfiguration<User>
                     .IsRequired();
             });
         });
-        
+
         builder.HasOne(u => u.Profile)
             .WithOne(p => p.User)
-            .HasForeignKey<Profile>(p => p.UserId);
+            .HasForeignKey<Profile>(p => p.UserId)
+            .OnDelete(DeleteBehavior.Cascade);
     }
 }

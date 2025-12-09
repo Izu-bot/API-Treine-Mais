@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "f9fKzx/lYjc=",
+  "dgSpecHash": "bkFwVcLjEfQ=",
   "success": true,
-  "projectFilePath": "/home/kauan/RiderProjects/API-Treine-Mais/tests/TreineMais.UnitTests/TreineMais.UnitTests.csproj",
+  "projectFilePath": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/tests/TreineMais.UnitTests/TreineMais.UnitTests.csproj",
   "expectedPackageFiles": [
     "/home/kauan/.nuget/packages/coverlet.collector/6.0.2/coverlet.collector.6.0.2.nupkg.sha512",
     "/home/kauan/.nuget/packages/microsoft.codecoverage/17.12.0/microsoft.codecoverage.17.12.0.nupkg.sha512",

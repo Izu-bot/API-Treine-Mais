@@ -6,8 +6,8 @@ namespace TreineMais.Domain.ValueObject;
 
 public class Login
 {
-    public Email Email { get; private set; }
-    public Password Password { get; private set; }
+    public Email Email { get; private set; } = null!;
+    public Password Password { get; private set; } = null!;
     
     private Login() { }
 

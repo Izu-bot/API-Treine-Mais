@@ -13,23 +13,23 @@ internal class ProfileTypeConfiguration : IEntityTypeConfiguration<Profile>
         builder.ToTable("Profiles");
 
         builder.HasKey(p => p.UserId);
-        
+
         builder.Property(g => g.Gender)
             .HasConversion(new EnumToStringConverter<Gender>())
             .HasMaxLength(50)
             .IsRequired();
-        
+
         builder.Property(p => p.BirthDate).HasColumnType("Date");
         builder.ComplexProperty(h => h.Height, heightBuilder =>
         {
             heightBuilder.Property(h => h.Value)
-                .HasColumnType("decimal(3,2)")
+                .HasColumnType("numeric(4,2)")
                 .IsRequired();
         });
         builder.ComplexProperty(w => w.Weight, weightBuilder =>
         {
             weightBuilder.Property(w => w.Value)
-                .HasColumnType("decimal(3,2)")
+                .HasColumnType("numeric(5,2)")
                 .IsRequired();
         });
         builder.Property(p => p.Goals)

@@ -80,7 +80,7 @@ namespace TreineMais.Infrastructure.Migrations
                             b1.IsRequired();
 
                             b1.Property<float>("Value")
-                                .HasColumnType("decimal(3,2)");
+                                .HasColumnType("numeric(4,2)");
                         });
 
                     b.ComplexProperty<Dictionary<string, object>>("Weight", "TreineMais.Domain.Entity.Profile.Weight#Weight", b1 =>
@@ -88,7 +88,7 @@ namespace TreineMais.Infrastructure.Migrations
                             b1.IsRequired();
 
                             b1.Property<float>("Value")
-                                .HasColumnType("decimal(3,2)");
+                                .HasColumnType("numeric(5,2)");
                         });
 
                     b.HasKey("UserId");

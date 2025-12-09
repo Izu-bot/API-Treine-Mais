@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "7UcU9PCwi+o=",
+  "dgSpecHash": "2pUXAhwAZU8=",
   "success": true,
-  "projectFilePath": "/home/kauan/RiderProjects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
+  "projectFilePath": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
   "expectedPackageFiles": [
     "/home/kauan/.nuget/packages/microsoft.netcore.app.ref/9.0.11/microsoft.netcore.app.ref.9.0.11.nupkg.sha512",
     "/home/kauan/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.11/microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512"
