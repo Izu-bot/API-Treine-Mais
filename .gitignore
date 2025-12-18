@@ -3,6 +3,10 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+# Diretorios
+.vscode
+.idea
+
 # dotenv files
 .env
 
