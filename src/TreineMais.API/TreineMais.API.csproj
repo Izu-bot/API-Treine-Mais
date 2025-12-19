@@ -17,4 +17,8 @@
       <ProjectReference Include="..\TreineMais.Infrastructure\TreineMais.Infrastructure.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <Folder Include="Filter/" />
+    </ItemGroup>
+
 </Project>
