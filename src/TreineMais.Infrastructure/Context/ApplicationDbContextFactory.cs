@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
+using TreineMais.Infrastructure.Exceptions;
 
 namespace TreineMais.Infrastructure.Context;
 
@@ -7,9 +8,10 @@ public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<Applicati
 {
     public ApplicationDbContext CreateDbContext(string[] args)
     {
-        DotNetEnv.Env.Load("../../.env");
+        DotNetEnv.Env.Load("../TreineMais.API/.env");
 
-        var connectionString = DotNetEnv.Env.GetString("ConnectionString__DefaultConnection");
+        var connectionString = DotNetEnv.Env.GetString("ConnectionString__DefaultConnection")
+        ?? throw new DatabaseConnectException("Erro: String de conexão não configurada corretamente, verificar o factory.");
 
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();
         optionsBuilder.UseNpgsql(connectionString);
