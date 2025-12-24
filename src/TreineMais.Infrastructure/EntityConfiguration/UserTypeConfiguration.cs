@@ -33,6 +33,12 @@ internal class UserTypeConfiguration : IEntityTypeConfiguration<User>
             });
         });
 
+        builder.Property(u => u.EmailConfirmed).IsRequired();
+        builder.Property(u => u.EmailConfirmedToken);
+        builder.Property(u => u.EmailConfirmationTokenExpiresAt)
+            .HasColumnType("timestamp with time zone")
+            .IsRequired(false);
+
         builder.HasOne(u => u.Profile)
             .WithOne(p => p.User)
             .HasForeignKey<Profile>(p => p.UserId)
