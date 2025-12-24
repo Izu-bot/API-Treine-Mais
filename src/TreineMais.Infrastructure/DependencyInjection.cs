@@ -13,7 +13,7 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services)
     {
-        DotNetEnv.Env.Load("../../.env");
+        DotNetEnv.Env.Load("../TreineMais.API/.env");
 
         var connectionString = DotNetEnv.Env.GetString("ConnectionString__DefaultConnection");
         services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));

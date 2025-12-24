@@ -3,6 +3,9 @@
 ##
 ## Get latest from `dotnet new gitignore`
 
+# Tests
+tests
+
 # Diretorios
 .vscode
 .idea

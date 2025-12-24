@@ -3,7 +3,7 @@ using TreineMais.API.Endpoints;
 using TreineMais.Application;
 using TreineMais.Infrastructure;
 
-DotNetEnv.Env.Load("../../.env");
+DotNetEnv.Env.Load();
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddOpenApi();
