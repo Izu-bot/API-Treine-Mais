@@ -1,6 +1,7 @@
 using System;
 using FluentValidation;
 using MediatR;
+using TreineMais.Application.Abstractions;
 using TreineMais.Application.DTO.Profile;
 using TreineMais.Application.DTO.User;
 using TreineMais.Application.Exceptions;
@@ -15,14 +16,18 @@ namespace TreineMais.Application.UseCase.CreateUser;
 public class CreateUserHandler : IRequestHandler<CreateUserCommand, UserResponse>
 {
     private readonly IUserRepository _repository;
+    private readonly IEmailSender _emailSender;
     private readonly IHashPassword _hashPassword;
     private readonly IValidator<CreateUserCommand> _validator;
-
-    public CreateUserHandler(IUserRepository repository, IHashPassword hashPassword, IValidator<CreateUserCommand> validator)
+    public CreateUserHandler(IUserRepository repository,
+                             IHashPassword hashPassword,
+                             IValidator<CreateUserCommand> validator,
+                             IEmailSender emailSender)
     {
         _repository = repository;
         _hashPassword = hashPassword;
         _validator = validator;
+        _emailSender = emailSender;
     }
 
     public async Task<UserResponse> Handle(CreateUserCommand request, CancellationToken cancellationToken)
@@ -49,6 +54,14 @@ public class CreateUserHandler : IRequestHandler<CreateUserCommand, UserResponse
             new Height(request.Height),
             new Weight(request.Weight),
             request.Goals
+        );
+
+        var link = $"http://localhost:5297/auth/confirm-email?token={user.EmailConfirmedToken}";
+
+        await _emailSender.SendAsync(
+            request.Email,
+            "Confirme seu e-mail",
+            $"Clique no link para confirmar {link}"
         );
 
         user.UpdateProfile(profile);

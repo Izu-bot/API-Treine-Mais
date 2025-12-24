@@ -19,8 +19,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <Folder Include="Abstractions/" />
       <Folder Include="Helpers/" />
       <Folder Include="Model/" />
+      <Folder Include="UseCase/ConfirmEmail/" />
     </ItemGroup>
 
 </Project>

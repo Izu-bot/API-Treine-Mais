@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Sprache;
 using TreineMais.Application.DTO.Profile;
 using TreineMais.Application.DTO.User;
+using TreineMais.Application.UseCase.ConfirmEmail;
 using TreineMais.Application.UseCase.CreateUser;
 
 namespace TreineMais.API.Endpoints;
@@ -15,6 +16,7 @@ internal static class AuthEndpoints
         var group = app.MapGroup("/auth");
 
         group.MapPost("/register", CreateAccount);
+        group.MapGet("/confirm-email", ConfirmEmail);
 
         return app;
     }
@@ -38,5 +40,14 @@ internal static class AuthEndpoints
 
         var result = await _mediator.Send(command);
         return Results.Created($"users/{result.UserId}", result);
+    }
+
+    private static async Task<IResult> ConfirmEmail(
+        [FromQuery] string token,
+        [FromServices] ConfirmEmailHandler handler
+    )
+    {
+        await handler.ExecuteAsync(new ConfirmEmailCommand(token));
+        return Results.Ok("E-mail confirmado.");
     }
 }

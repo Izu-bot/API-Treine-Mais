@@ -1,0 +1,8 @@
+using System;
+
+namespace TreineMais.Application.Abstractions;
+
+public interface IEmailSender
+{
+    Task SendAsync(string to, string subject, string body);
+}
