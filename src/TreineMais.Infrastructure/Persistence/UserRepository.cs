@@ -28,8 +28,8 @@ internal class UserRepository : IUserRepository
         await _context.SaveChangesAsync();
     }
 
-    public async Task<User?> GetByEmailAsync(Domain.ValueObject.Email email)
-        => await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Login.Email == email);
+    public async Task<User?> GetByEmailAsync(string email)
+        => await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Login.Email.Value == email);
 
     public async Task<User?> GetByEmailConfirmationTokenAsync(string token)
         => await _context.Users
