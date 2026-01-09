@@ -202,11 +202,3 @@
 /home/kauan/RiderProjects/API-Treine-Mais/tests/TreineMais.UnitTests/obj/Debug/net9.0/TreineMais.UnitTests.pdb
 /home/kauan/RiderProjects/API-Treine-Mais/tests/TreineMais.UnitTests/obj/Debug/net9.0/TreineMais.UnitTests.genruntimeconfig.cache
 /home/kauan/RiderProjects/API-Treine-Mais/tests/TreineMais.UnitTests/obj/Debug/net9.0/ref/TreineMais.UnitTests.dll
-/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/tests/TreineMais.UnitTests/bin/Debug/net9.0/.msCoverageSourceRootsMapping_TreineMais.UnitTests
-/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/tests/TreineMais.UnitTests/bin/Debug/net9.0/CoverletSourceRootsMapping_TreineMais.UnitTests
-/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/tests/TreineMais.UnitTests/obj/Debug/net9.0/TreineMais.UnitTests.csproj.AssemblyReference.cache
-/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/tests/TreineMais.UnitTests/obj/Debug/net9.0/TreineMais.UnitTests.GeneratedMSBuildEditorConfig.editorconfig
-/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/tests/TreineMais.UnitTests/obj/Debug/net9.0/TreineMais.UnitTests.AssemblyInfoInputs.cache
-/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/tests/TreineMais.UnitTests/obj/Debug/net9.0/TreineMais.UnitTests.AssemblyInfo.cs
-/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/tests/TreineMais.UnitTests/obj/Debug/net9.0/TreineMais.UnitTests.csproj.CoreCompileInputs.cache
-/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/tests/TreineMais.UnitTests/obj/Debug/net9.0/TreineMais.UnitTests.sourcelink.json
