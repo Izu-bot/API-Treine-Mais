@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {}
+    "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {}
   },
   "projects": {
-    "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
+    "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
+        "projectUniqueName": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
         "projectName": "TreineMais.Domain",
-        "projectPath": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
+        "projectPath": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
         "packagesPath": "/home/kauan/.nuget/packages/",
-        "outputPath": "/home/kauan/Documents/Estudos/Projetos_net/TreineMais/API-Treine-Mais/src/TreineMais.Domain/obj/",
+        "outputPath": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Domain/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "/home/kauan/.nuget/NuGet/NuGet.Config"
@@ -69,7 +69,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/10.0.100/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

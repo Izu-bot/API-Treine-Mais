@@ -27,6 +27,7 @@ public static class DependencyInjection
 
         services.AddScoped<IUserRepository, UserRepository>();
         services.AddSingleton<IHashPassword, HashPassword>();
+        services.AddSingleton<IJwtGenerate, JwtGenerate>();
 
         services.AddSingleton<IEmailSender, SmtpEmailSender>();
 
