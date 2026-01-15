@@ -23,6 +23,7 @@
       <Folder Include="Helpers/" />
       <Folder Include="Model/" />
       <Folder Include="UseCase/ConfirmEmail/" />
+      <Folder Include="UseCase/LoginUser/" />
     </ItemGroup>
 
 </Project>
