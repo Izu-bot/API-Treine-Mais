@@ -7,24 +7,21 @@ using Microsoft.IdentityModel.Tokens;
 using TreineMais.Application.DTO.Auth;
 using TreineMais.Application.Security;
 using TreineMais.Domain.Abstractions;
+using TreineMais.Domain.Entity;
 
 namespace TreineMais.Infrastructure.Security;
 
 public class JwtGenerate : IJwtGenerate
 {
-    private readonly IUserRepository _repository;
     private readonly IConfiguration _configuration;
 
-    public JwtGenerate(IUserRepository repository, IConfiguration configuration)
+    public JwtGenerate(IConfiguration configuration)
     {
-        _repository = repository;
         _configuration = configuration;
     }
 
-    public string GenerateJwt(AuthRequest request)
+    public string GenerateJwt(User request)
     {
-        var user = _repository.GetByEmailAsync(request.Email);
-
         var issuer = _configuration["JWT:Issuer"];
         var audience = _configuration["JWT:Audience"];
         var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]!));
@@ -32,14 +29,17 @@ public class JwtGenerate : IJwtGenerate
 
         var claims = new[]
         {
-           new Claim(JwtRegisteredClaimNames.Sub, user.Id.ToString()),
-           new Claim(ClaimTypes.Email, request.Email),
+           new Claim(JwtRegisteredClaimNames.Sub, request.Id.ToString()),
+           new Claim(ClaimTypes.Email, request.Login.Email.Value),
         };
 
+        // Expires ganhou DateTime.UtcNow pois por algum motivo DateTime.Now
+        // estava retornando um horario anterior a hora atual.
+        // Ainda não sei por que mas é algo a ser estudado.
         var tokenDescriptor = new SecurityTokenDescriptor
         {
            Subject = new ClaimsIdentity(claims),
-           Expires = DateTime.Now.AddHours(2),
+           Expires = DateTime.UtcNow.AddHours(2),
            Issuer = issuer,
            Audience = audience,
            SigningCredentials = credentials
