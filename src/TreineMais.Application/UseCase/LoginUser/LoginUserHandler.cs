@@ -32,12 +32,14 @@ public class LoginUserHandler : IRequestHandler<LoginUserCommand, AuthResponse>
         // para um dado do tipo AuthRequest.
         string accessToken = _jwtGenerate.GenerateJwt(user);
 
-        // Precisa ainda ser feita a validação do email do usuário
-        // antes de realmente efetuar a entrega do token
+        // Salvar esse refresh em um banco de dados como o 
+        // redis ou sqlite,
+        // adicionar também uma data para expiração.
+        string refreshToken = Guid.NewGuid().ToString();
 
         return new AuthResponse(
             accessToken,
-            "refreshToken ainda não foi implementado."
+            refreshToken
         );
     }
 }

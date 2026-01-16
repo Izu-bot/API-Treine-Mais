@@ -20,6 +20,7 @@ internal static class AuthEndpoints
         group.MapPost("/register", CreateAccount);
         group.MapGet("/confirm-email", ConfirmEmail);
         group.MapPost("/login", Login);
+        group.MapPost("/refresh", Refresh);
 
         return app;
     }
@@ -74,5 +75,10 @@ internal static class AuthEndpoints
         };
 
         return Results.Ok(tokens);
+    }
+
+    private static async Task<IResult> Refresh()
+    {
+        return Results.Ok("Sistema de Refresh Token ainda não implementado.");
     }
 }

@@ -1,5 +1,6 @@
 
 using TreineMais.API.Endpoints;
+using TreineMais.API.Extensions;
 using TreineMais.Application;
 using TreineMais.Infrastructure;
 
@@ -8,6 +9,8 @@ DotNetEnv.Env.Load();
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddEnvironmentVariables();
 
+builder.Services.AddJwtAuthentication(builder.Configuration);
+
 builder.Services.AddOpenApi();
 
 builder.Services
@@ -15,6 +18,9 @@ builder.Services
     .AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
+
+app.UseAuthentication();
+app.UseAuthentication();
 
 if (app.Environment.IsDevelopment())
 {
