@@ -70,7 +70,7 @@ internal static class AuthEndpoints
 
         Dictionary<string, string> tokens = new()
         {
-            {"AccesToken", result.AccessToken},
+            {"AccessToken", result.AccessToken},
             {"RefreshToken", result.RefreshToken}
         };
 

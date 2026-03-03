@@ -1,7 +1,5 @@
-using System;
 using BCrypt.Net;
 using TreineMais.Application.Security;
-using TreineMais.Domain.ValueObject;
 
 namespace TreineMais.Infrastructure.Security;
 

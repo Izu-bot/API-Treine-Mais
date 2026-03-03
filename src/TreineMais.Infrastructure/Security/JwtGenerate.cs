@@ -23,11 +23,11 @@ public class JwtGenerate : IJwtGenerate
 
     public string GenerateJwt(User request)
     {
-        var issuer = _configuration["JWT:Issuer"];
-        var audience = _configuration["JWT:Audience"];
-        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:Key"]!));
+        var issuer = _configuration["JWT:ISSUER"];
+        var audience = _configuration["JWT:AUDIENCE"];
+        var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_configuration["JWT:KEY"]!));
 
-        var expiresSettings = _configuration["JWT:AccesTokenExpire"];
+        var expiresSettings = _configuration["JWT:ACCESSTOKENEXPIRE"];
         double expireHoursInSeconds = double.TryParse(expiresSettings, out var result) ? result : 2;
         
         var credentials = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);

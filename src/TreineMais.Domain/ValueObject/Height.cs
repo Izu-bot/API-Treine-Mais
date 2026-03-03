@@ -8,7 +8,7 @@ public class Height
 
     public Height(float value)
     {
-        if (value <= 0)
+        if (value < 0)
             throw new InvalidOperationException("Height cannot be negative.");
         if (value > 2.80f)
             throw new InvalidOperationException("Height cannot be greater than 2.80m.");
