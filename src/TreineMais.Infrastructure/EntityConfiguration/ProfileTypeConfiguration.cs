@@ -17,21 +17,27 @@ internal class ProfileTypeConfiguration : IEntityTypeConfiguration<Profile>
         builder.Property(g => g.Gender)
             .HasConversion(new EnumToStringConverter<Gender>())
             .HasMaxLength(50)
-            .IsRequired();
+            .IsRequired(false);
 
-        builder.Property(p => p.BirthDate).HasColumnType("Date");
-        builder.ComplexProperty(h => h.Height, heightBuilder =>
+        builder.Property(p => p.BirthDate).HasColumnType("Date").IsRequired(false);
+        builder.OwnsOne(p => p.Height, heightBuilder =>
         {
             heightBuilder.Property(h => h.Value)
                 .HasColumnType("numeric(4,2)")
-                .IsRequired();
+                .HasColumnName("Height");
         });
-        builder.ComplexProperty(w => w.Weight, weightBuilder =>
+
+        builder.Navigation(p => p.Height).IsRequired(false);
+
+        builder.OwnsOne(p => p.Weight, weightBuilder =>
         {
             weightBuilder.Property(w => w.Value)
                 .HasColumnType("numeric(5,2)")
-                .IsRequired();
+                .HasColumnName("Weight");
         });
+        
+        builder.Navigation(p => p.Weight).IsRequired(false);
+        
         builder.Property(p => p.Goals)
             .HasColumnType("varchar(300)")
             .IsRequired(false);

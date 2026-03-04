@@ -8,7 +8,7 @@ public class User
     public Guid Id { get; private set; }
     public bool Active { get; private set; }
     public DateTime CreatedAt { get; private set; }
-    public Profile Profile { get; private set; } = null!;
+    public Profile Profile { get; private set; }
     public Login Login { get; private set; } = null!;
     public bool EmailConfirmed { get; private set; }
     public string? EmailConfirmedToken { get; private set; }

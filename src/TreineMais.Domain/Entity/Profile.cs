@@ -4,18 +4,18 @@ namespace TreineMais.Domain.Entity;
 
 public class Profile
 {
-    public string Name { get; private set; } = null!;
+    public string Name { get; private set; } = string.Empty;
     public Guid UserId { get; private set; }
-    public Gender Gender { get; private set; }
-    public DateTime BirthDate { get; private set; }
-    public Height Height { get; private set; } = null!;
-    public Weight Weight { get; private set; } = null!;
-    public string Goals { get; private set; } =  null!;
+    public Gender? Gender { get; private set; }
+    public DateTime? BirthDate { get; private set; }
+    public Height? Height { get; private set; }
+    public Weight? Weight { get; private set; }
+    public string Goals { get; private set; } = string.Empty;
     public User User { get; private set; } = null!;
     
     private Profile() { }
 
-    public Profile(Guid userId, string name, Gender gender, DateTime birthDate, Height height, Weight weight, string? goals)
+    public Profile(Guid userId, string name, Gender? gender, DateTime? birthDate, Height? height, Weight? weight, string? goals)
     {
         UserId = userId;
         Name = name;

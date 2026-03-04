@@ -17,11 +17,11 @@ public class SmtpEmailSender : IEmailSender
         
         using var client = new SmtpClient("smtp.gmail.com", 587)
         {
-            EnableSsl = true,
             Credentials = new NetworkCredential(
-                Environment.GetEnvironmentVariable("SMPT_USER"),
-                Environment.GetEnvironmentVariable("SMPT_PASS")
+                userName: DotNetEnv.Env.GetString("SMTP_USER"),
+                password: DotNetEnv.Env.GetString("SMTP_PASS")
             ),
+            EnableSsl = true,
             Timeout = 10000
         };
         await client.SendMailAsync(message);

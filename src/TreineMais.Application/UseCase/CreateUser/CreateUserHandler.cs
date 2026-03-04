@@ -1,4 +1,3 @@
-using System;
 using FluentValidation;
 using MediatR;
 using TreineMais.Application.Abstractions;
@@ -42,7 +41,7 @@ public class CreateUserHandler : IRequestHandler<CreateUserCommand, UserResponse
         Login login = new(email, hashedPassword);
 
         var user = new User(login);
-
+        
         if (!Enum.TryParse<Gender>(request.Gender, true, out var gender))
             throw new GenderInvalidException(request.Gender);
 
@@ -56,7 +55,7 @@ public class CreateUserHandler : IRequestHandler<CreateUserCommand, UserResponse
             request.Goals
         );
 
-        var link = $"http://localhost:5297/auth/confirm-email?token={user.EmailConfirmedToken}";
+        var link = $"http://10.0.2.2:5297/auth/confirm-email?token={user.EmailConfirmedToken}";
 
         await _emailSender.SendAsync(
             request.Email,
@@ -73,10 +72,10 @@ public class CreateUserHandler : IRequestHandler<CreateUserCommand, UserResponse
             user.Login.Email.Value,
             new ProfileResponse(
                 profile.Name,
-                profile.Gender.GetDisplayname(),
-                profile.BirthDate.ToString("d"),
-                profile.Height.Value,
-                profile.Weight.Value,
+                profile.Gender?.GetDisplayname(),
+                profile.BirthDate?.ToString("d"),
+                profile.Height?.Value,
+                profile.Weight?.Value,
                 profile.Goals
             )
         );
