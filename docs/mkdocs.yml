@@ -1,0 +1,59 @@
+site_name: TreineMais - Documentação
+site_description: Documentação do domínio da aplicação TreineMais
+site_author: Kauan Cardoso
+repo_url: https://github.com/Izu-bot/API-Treine-Mais
+repo_name: treinemais
+
+theme:
+  name: material
+  language: pt
+  palette:
+    - scheme: default
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-7
+        name: Modo escuro
+    - scheme: slate
+      primary: deep orange
+      accent: orange
+      toggle:
+        icon: material/brightness-4
+        name: Modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+  - tables
+  - attr_list
+
+nav:
+  - Home: index.md
+  - Domínio:
+    - Visão Geral: domain/overview.md
+    - Entidades:
+      - User: domain/entities/user.md
+      - Profile: domain/entities/profile.md
+      - Exercise: domain/entities/exercise.md
+      - Training: domain/entities/training.md
+      - Routine: domain/entities/routine.md
+
+extra_javascript:
+  - https://unpkg.com/mermaid@10/dist/mermaid.min.js

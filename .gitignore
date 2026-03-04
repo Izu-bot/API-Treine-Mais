@@ -6,6 +6,9 @@
 # Tests
 tests
 
+# .venv
+docs/.venv
+
 # Diretorios
 .vscode
 .idea
