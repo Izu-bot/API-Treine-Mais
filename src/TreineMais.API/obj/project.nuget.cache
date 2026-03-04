@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ziD5hHO1yYQ=",
+  "dgSpecHash": "hlLgd1JVcbA=",
   "success": true,
-  "projectFilePath": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.API/TreineMais.API.csproj",
+  "projectFilePath": "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.API/TreineMais.API.csproj",
   "expectedPackageFiles": [
     "/home/kauan/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/home/kauan/.nuget/packages/dotnetenv/3.1.1/dotnetenv.3.1.1.nupkg.sha512",
@@ -113,9 +113,9 @@
     "/home/kauan/.nuget/packages/system.threading.timer/4.3.0/system.threading.timer.4.3.0.nupkg.sha512",
     "/home/kauan/.nuget/packages/system.xml.readerwriter/4.3.0/system.xml.readerwriter.4.3.0.nupkg.sha512",
     "/home/kauan/.nuget/packages/system.xml.xdocument/4.3.0/system.xml.xdocument.4.3.0.nupkg.sha512",
-    "/home/kauan/.nuget/packages/microsoft.netcore.app.ref/9.0.11/microsoft.netcore.app.ref.9.0.11.nupkg.sha512",
-    "/home/kauan/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.11/microsoft.aspnetcore.app.ref.9.0.11.nupkg.sha512",
-    "/home/kauan/.nuget/packages/microsoft.netcore.app.host.linux-x64/9.0.11/microsoft.netcore.app.host.linux-x64.9.0.11.nupkg.sha512"
+    "/home/kauan/.nuget/packages/microsoft.netcore.app.ref/9.0.13/microsoft.netcore.app.ref.9.0.13.nupkg.sha512",
+    "/home/kauan/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.13/microsoft.aspnetcore.app.ref.9.0.13.nupkg.sha512",
+    "/home/kauan/.nuget/packages/microsoft.netcore.app.host.linux-x64/9.0.13/microsoft.netcore.app.host.linux-x64.9.0.13.nupkg.sha512"
   ],
   "logs": []
 }

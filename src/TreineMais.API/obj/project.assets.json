@@ -6043,11 +6043,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.API/TreineMais.API.csproj",
+      "projectUniqueName": "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.API/TreineMais.API.csproj",
       "projectName": "TreineMais.API",
-      "projectPath": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.API/TreineMais.API.csproj",
+      "projectPath": "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.API/TreineMais.API.csproj",
       "packagesPath": "/home/kauan/.nuget/packages/",
-      "outputPath": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.API/obj/",
+      "outputPath": "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.API/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/kauan/.nuget/NuGet/NuGet.Config"
@@ -6062,14 +6062,14 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj": {
-              "projectPath": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj"
+            "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj": {
+              "projectPath": "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.Application/TreineMais.Application.csproj"
             },
-            "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
-              "projectPath": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj"
+            "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj": {
+              "projectPath": "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj"
             },
-            "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Infrastructure/TreineMais.Infrastructure.csproj": {
-              "projectPath": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Infrastructure/TreineMais.Infrastructure.csproj"
+            "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.Infrastructure/TreineMais.Infrastructure.csproj": {
+              "projectPath": "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.Infrastructure/TreineMais.Infrastructure.csproj"
             }
           }
         }
@@ -6117,15 +6117,15 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[9.0.11, 9.0.11]"
+            "version": "[9.0.13, 9.0.13]"
           },
           {
             "name": "Microsoft.NETCore.App.Host.linux-x64",
-            "version": "[9.0.11, 9.0.11]"
+            "version": "[9.0.13, 9.0.13]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[9.0.11, 9.0.11]"
+            "version": "[9.0.13, 9.0.13]"
           }
         ],
         "frameworkReferences": {
@@ -6136,7 +6136,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

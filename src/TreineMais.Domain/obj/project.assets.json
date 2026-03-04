@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
+      "projectUniqueName": "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
       "projectName": "TreineMais.Domain",
-      "projectPath": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
+      "projectPath": "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.Domain/TreineMais.Domain.csproj",
       "packagesPath": "/home/kauan/.nuget/packages/",
-      "outputPath": "/home/kauan/Documents/Estudos/Projetos/TreineMais/API-Treine-Mais/src/TreineMais.Domain/obj/",
+      "outputPath": "/home/kauan/Documents/Projects/API-Treine-Mais/src/TreineMais.Domain/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/kauan/.nuget/NuGet/NuGet.Config"
@@ -63,11 +63,11 @@
         "downloadDependencies": [
           {
             "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[9.0.11, 9.0.11]"
+            "version": "[9.0.13, 9.0.13]"
           },
           {
             "name": "Microsoft.NETCore.App.Ref",
-            "version": "[9.0.11, 9.0.11]"
+            "version": "[9.0.13, 9.0.13]"
           }
         ],
         "frameworkReferences": {
@@ -75,7 +75,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/10.0.101/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
