@@ -19,8 +19,8 @@ public static class DependencyInjection
     {
         DotNetEnv.Env.Load("../TreineMais.API/.env");
 
-        var connectionString = configuration.GetConnectionString("ConnectionString:DefaultConnection")
-        ?? DotNetEnv.Env.GetString("ConnectionString__DefaultConnection")
+        var connectionString = configuration.GetConnectionString("CONNECTION_STRING")
+        ?? DotNetEnv.Env.GetString("CONNECTION_STRING")
         ?? throw new DatabaseConnectException("Não foi possivel se conectar com o banco de dados.");
 
         services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));

@@ -414,7 +414,7 @@
       },
       "TreineMais.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v9.0",
+        "framework": "Unsupported,Version=v0.0",
         "compile": {
           "bin/placeholder/TreineMais.Domain.dll": {}
         },
@@ -1051,5 +1051,16 @@
         "runtimeIdentifierGraphPath": "/home/kauan/.dotnet/sdk/10.0.103/PortableRuntimeIdentifierGraph.json"
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1201",
+      "level": "Error",
+      "message": "Project TreineMais.Domain is not compatible with net9.0 (.NETCoreApp,Version=v9.0). Project TreineMais.Domain supports: net10.0 (.NETCoreApp,Version=v10.0)",
+      "libraryId": "TreineMais.Domain",
+      "targetGraphs": [
+        "net9.0"
+      ]
+    }
+  ]
 }

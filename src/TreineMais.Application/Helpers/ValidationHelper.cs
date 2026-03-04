@@ -1,4 +1,3 @@
-using System;
 using FluentValidation;
 using TreineMais.Application.Exception;
 using TreineMais.Application.Model;

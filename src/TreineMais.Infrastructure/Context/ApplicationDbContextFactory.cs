@@ -10,7 +10,7 @@ public class ApplicationDbContextFactory : IDesignTimeDbContextFactory<Applicati
     {
         DotNetEnv.Env.Load("../TreineMais.API/.env");
 
-        var connectionString = DotNetEnv.Env.GetString("ConnectionString__DefaultConnection")
+        var connectionString = DotNetEnv.Env.GetString("CONNECTION_STRING")
         ?? throw new DatabaseConnectException("Erro: String de conexão não configurada corretamente, verificar o factory.");
 
         var optionsBuilder = new DbContextOptionsBuilder<ApplicationDbContext>();

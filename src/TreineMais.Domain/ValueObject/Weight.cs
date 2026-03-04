@@ -8,7 +8,7 @@ public class Weight
 
     public Weight(float value)
     {
-        if (value <= 0)
+        if (value < 0)
             throw new InvalidOperationException("Weight must be positive");
         if (value > 500.0f)
             throw new InvalidOperationException("Weight must be less than 500.00");
