@@ -414,7 +414,7 @@
       },
       "TreineMais.Domain/1.0.0": {
         "type": "project",
-        "framework": "Unsupported,Version=v0.0",
+        "framework": ".NETCoreApp,Version=v9.0",
         "compile": {
           "bin/placeholder/TreineMais.Domain.dll": {}
         },
@@ -1054,13 +1054,10 @@
   },
   "logs": [
     {
-      "code": "NU1201",
-      "level": "Error",
-      "message": "Project TreineMais.Domain is not compatible with net9.0 (.NETCoreApp,Version=v9.0). Project TreineMais.Domain supports: net10.0 (.NETCoreApp,Version=v10.0)",
-      "libraryId": "TreineMais.Domain",
-      "targetGraphs": [
-        "net9.0"
-      ]
+      "code": "Undefined",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Problem reading the cache file /home/kauan/Documents/Projects/API-Treine-Mais/tests/TreineMais.UnitTests/obj/project.nuget.cache : '<' is an invalid start of a property name. Expected a '\"'. Path: $ | LineNumber: 2 | BytePositionInLine: 0."
     }
   ]
 }
