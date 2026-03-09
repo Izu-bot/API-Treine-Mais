@@ -9,6 +9,8 @@ DotNetEnv.Env.Load();
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddEnvironmentVariables();
 
+builder.Services.AddOpenApi();
+
 builder.Services.AddJwtAuthentication(builder.Configuration);
 
 builder.Services.AddOpenApi();
