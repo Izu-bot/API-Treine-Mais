@@ -1,4 +1,4 @@
-using BCrypt.Net;
+using Isopoh.Cryptography.Argon2;
 using TreineMais.Application.Security;
 
 namespace TreineMais.Infrastructure.Security;
@@ -9,14 +9,16 @@ public class HashPassword : IHashPassword
     {
         try
         {
-            return BCrypt.Net.BCrypt.Verify(plain, hash);
+            return Argon2.Verify(plain, hash);
         }
-        catch(BcryptAuthenticationException ex)
+        catch(Exception ex)
         {
-            throw new BcryptAuthenticationException($"Erro ao tentar verificar a senha: {ex.Message}");
+            throw new ($"Erro ao tentar verificar a senha: {ex.Message}");
         }
     }
 
     string IHashPassword.HashPassword(string password)
-        => BCrypt.Net.BCrypt.HashPassword(password);
+        => Argon2.Hash(password);
+
+
 }
