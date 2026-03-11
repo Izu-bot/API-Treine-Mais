@@ -55,7 +55,7 @@ public class CreateUserHandler : IRequestHandler<CreateUserCommand, UserResponse
             request.Goals
         );
 
-        var link = $"http://10.0.2.2:5297/auth/confirm-email?token={user.EmailConfirmedToken}";
+        var link = $"http://localhost:5297/auth/confirm-email?token={user.EmailConfirmedToken}";
 
         await _emailSender.SendAsync(
             request.Email,

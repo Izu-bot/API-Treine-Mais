@@ -16,6 +16,7 @@ public class User
     public ICollection<Exercise> Exercises { get; private set; } = new List<Exercise>();
     public ICollection<Training> Trainings { get; private set; } = new List<Training>();
     public ICollection<Routine> Routines { get; private set; } = new List<Routine>();
+    public ICollection<RefreshToken> RefreshTokens { get; private set; } = new List<RefreshToken>();
     
     private User() { }
 
