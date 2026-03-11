@@ -4,6 +4,7 @@ using TreineMais.Application.DTO.Auth;
 using TreineMais.Application.Exceptions;
 using TreineMais.Application.Security;
 using TreineMais.Domain.Abstractions;
+using TreineMais.Domain.Entity;
 
 namespace TreineMais.Application.UseCase.LoginUser;
 
@@ -12,12 +13,18 @@ public class LoginUserHandler : IRequestHandler<LoginUserCommand, AuthResponse>
     private readonly IUserRepository _repository;
     private readonly IHashPassword _hashPassword;
     private readonly IJwtGenerate _jwtGenerate;
+    private readonly IRefreshTokenRepository _refreshTokenRepository;
 
-    public LoginUserHandler(IUserRepository repository, IHashPassword hashPassword, IJwtGenerate jwtGenerate)
+    public LoginUserHandler(
+        IUserRepository repository,
+        IJwtGenerate jwtGenerate,
+        IHashPassword hashPassword,
+        IRefreshTokenRepository refreshTokenRepository)
     {
         _repository = repository;
         _hashPassword = hashPassword;
         _jwtGenerate = jwtGenerate;
+        _refreshTokenRepository = refreshTokenRepository;
     }
 
     public async Task<AuthResponse> Handle(LoginUserCommand request, CancellationToken cancellationToken)
@@ -32,14 +39,13 @@ public class LoginUserHandler : IRequestHandler<LoginUserCommand, AuthResponse>
         // para um dado do tipo AuthRequest.
         string accessToken = _jwtGenerate.GenerateJwt(user);
 
-        // Salvar esse refresh em um banco de dados como o 
-        // redis ou sqlite,
-        // adicionar também uma data para expiração.
-        string refreshToken = Guid.NewGuid().ToString();
+        var refreshToken = new RefreshToken(user.Id);
+        
+        await _refreshTokenRepository.Add(refreshToken);
 
         return new AuthResponse(
             accessToken,
-            refreshToken
+            refreshToken.Token
         );
     }
 }

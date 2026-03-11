@@ -1,6 +1,3 @@
 namespace TreineMais.Application.DTO.Auth;
 
-public class LogoutResponse
-{
-    
-}
+public record LogoutResponse(string Message);

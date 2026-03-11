@@ -1,13 +1,12 @@
-using System;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Sprache;
 using TreineMais.Application.DTO.Auth;
-using TreineMais.Application.DTO.Profile;
 using TreineMais.Application.DTO.User;
 using TreineMais.Application.UseCase.ConfirmEmail;
+using TreineMais.Application.UseCase.ConfirmRefreshToken;
 using TreineMais.Application.UseCase.CreateUser;
 using TreineMais.Application.UseCase.LoginUser;
+using TreineMais.Application.UseCase.LogoutUser;
 
 namespace TreineMais.API.Endpoints;
 
@@ -21,13 +20,14 @@ internal static class AuthEndpoints
         group.MapGet("/confirm-email", ConfirmEmail);
         group.MapPost("/login", Login);
         group.MapPost("/refresh", Refresh);
+        group.MapPost("/logout", Logout);
 
         return app;
     }
 
     private static async Task<IResult> CreateAccount(
         [FromBody] UserRequest request,
-        [FromServices] IMediator _mediator
+        [FromServices] IMediator mediator
     )
     {
         var command = new CreateUserCommand
@@ -42,7 +42,7 @@ internal static class AuthEndpoints
             Goals = request.Profile.Goals!
         };
 
-        var result = await _mediator.Send(command);
+        var result = await mediator.Send(command);
         return Results.Created($"users/{result.UserId}", result);
     }
 
@@ -57,7 +57,7 @@ internal static class AuthEndpoints
 
     private static async Task<IResult> Login(
         [FromBody] AuthRequest request,
-        [FromServices] IMediator _mediator
+        [FromServices] IMediator mediator
     )
     {
         var command = new LoginUserCommand
@@ -66,7 +66,7 @@ internal static class AuthEndpoints
             Password = request.Password
         };
 
-        var result = await _mediator.Send(command);
+        var result = await mediator.Send(command);
 
         Dictionary<string, string> tokens = new()
         {
@@ -77,8 +77,19 @@ internal static class AuthEndpoints
         return Results.Ok(tokens);
     }
 
-    private static async Task<IResult> Refresh()
+    private static async Task<IResult> Refresh(
+        [FromBody] RefreshTokenCommand command,
+        [FromServices] IMediator mediator)
     {
-        return Results.Ok("Sistema de Refresh Token ainda não implementado.");
+        var result = await mediator.Send(command);
+        return Results.Ok(result);
+    }
+
+    private static async Task<IResult> Logout(
+        [FromBody] LogoutUserCommand command,
+        [FromServices] IMediator mediator)
+    {
+        var result = await mediator.Send(command);
+        return Results.Ok(result);
     }
 }
