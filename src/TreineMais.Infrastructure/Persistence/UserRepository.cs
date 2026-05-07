@@ -1,8 +1,6 @@
-using System;
 using Microsoft.EntityFrameworkCore;
 using TreineMais.Domain.Abstractions;
 using TreineMais.Domain.Entity;
-using TreineMais.Domain.ValueObject;
 using TreineMais.Infrastructure.Context;
 
 namespace TreineMais.Infrastructure.Persistence;
@@ -29,15 +27,21 @@ internal class UserRepository : IUserRepository
     }
 
     public async Task<User?> GetByEmailAsync(string email)
-        => await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Login.Email.Value == email);
+    {
+        return await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Login.Email.Value == email);
+    }
 
     public async Task<User?> GetByEmailConfirmationTokenAsync(string token)
-        => await _context.Users
+    {
+        return await _context.Users
             .AsNoTracking()
             .FirstOrDefaultAsync(u => u.EmailConfirmedToken == token);
+    }
 
     public async Task<User?> GetByIdAsync(Guid id)
-        => await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
+    {
+        return await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
+    }
 
     public async Task UpdateAsync(User user)
     {

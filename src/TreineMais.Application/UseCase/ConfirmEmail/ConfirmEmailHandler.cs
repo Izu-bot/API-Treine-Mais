@@ -1,5 +1,3 @@
-using System;
-using MediatR;
 using TreineMais.Application.Exceptions;
 using TreineMais.Domain.Abstractions;
 
@@ -17,8 +15,8 @@ public class ConfirmEmailHandler
     public async Task ExecuteAsync(ConfirmEmailCommand command)
     {
         var user = await _repository.GetByEmailConfirmationTokenAsync(command.Token)
-        ?? throw new BusinessException("Token inválido.");
-        
+                   ?? throw new BusinessException("Token inválido.");
+
         user.ConfirmEmail(command.Token);
 
         await _repository.UpdateAsync(user);

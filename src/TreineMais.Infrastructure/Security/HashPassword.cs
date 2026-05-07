@@ -11,14 +11,14 @@ public class HashPassword : IHashPassword
         {
             return Argon2.Verify(plain, hash);
         }
-        catch(Exception ex)
+        catch (Exception ex)
         {
-            throw new ($"Erro ao tentar verificar a senha: {ex.Message}");
+            throw new Exception($"Erro ao tentar verificar a senha: {ex.Message}");
         }
     }
 
     string IHashPassword.HashPassword(string password)
-        => Argon2.Hash(password);
-
-
+    {
+        return Argon2.Hash(password);
+    }
 }

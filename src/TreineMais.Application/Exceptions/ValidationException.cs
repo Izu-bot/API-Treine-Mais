@@ -1,12 +1,9 @@
-using System;
 using TreineMais.Application.Model;
 
 namespace TreineMais.Application.Exceptions;
 
 public abstract class ValidationException : BusinessException
 {
-    public IReadOnlyCollection<ValidationError> Errors { get; }
-
     protected ValidationException(
         string message,
         IEnumerable<ValidationError> errors
@@ -14,4 +11,6 @@ public abstract class ValidationException : BusinessException
     {
         Errors = errors.ToList().AsReadOnly();
     }
+
+    public IReadOnlyCollection<ValidationError> Errors { get; }
 }

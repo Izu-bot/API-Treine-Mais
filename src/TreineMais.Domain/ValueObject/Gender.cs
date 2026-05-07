@@ -4,12 +4,9 @@ namespace TreineMais.Domain.ValueObject;
 
 public enum Gender
 {
-    [Display(Name = "Male")]
-    Male,
-    [Display(Name = "Female")]
-    Female,
-    [Display(Name = "Other")]
-    Other
+    [Display(Name = "Male")] Male,
+    [Display(Name = "Female")] Female,
+    [Display(Name = "Other")] Other
 }
 
 public static class EnumExtensions

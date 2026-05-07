@@ -9,23 +9,23 @@ public class TrainingEntityConfiguration : IEntityTypeConfiguration<Training>
     public void Configure(EntityTypeBuilder<Training> builder)
     {
         builder.ToTable("Trainings");
-        
+
         builder.HasKey(t => t.Id);
-        
+
         builder.Property(t => t.Id)
             .ValueGeneratedOnAdd();
-            
+
         builder.Property(t => t.UserId)
             .IsRequired();
-            
+
         builder.Property(t => t.Name)
             .HasMaxLength(100)
             .IsRequired();
-            
+
         builder.Property(t => t.Description)
             .HasMaxLength(500)
             .IsRequired(false);
-            
+
         builder.Property(t => t.Date)
             .IsRequired();
 
@@ -39,18 +39,18 @@ public class TrainingEntityConfiguration : IEntityTypeConfiguration<Training>
         builder.OwnsMany(t => t.Exercises, teBuilder =>
         {
             teBuilder.ToTable("TrainingExercises");
-    
+
             teBuilder.WithOwner()
                 .HasForeignKey("TrainingId");
-    
+
             teBuilder.HasKey("Id", "TrainingId");
-    
+
             teBuilder.Property(te => te.ExerciseId)
                 .IsRequired();
-        
+
             teBuilder.Property(te => te.Sets)
                 .IsRequired();
-        
+
             teBuilder.Property(te => te.Reps)
                 .IsRequired();
 

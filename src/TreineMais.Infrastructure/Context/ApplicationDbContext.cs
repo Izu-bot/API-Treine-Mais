@@ -12,7 +12,9 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<Training> Trainings { get; set; }
     public DbSet<Routine> Routines { get; set; }
     public DbSet<RefreshToken> RefreshTokens { get; set; }
-    
+
     protected override void OnModelCreating(ModelBuilder modelBuilder)
-        => modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    {
+        modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+    }
 }

@@ -1,6 +1,6 @@
-using System;
 using System.Net;
 using System.Net.Mail;
+using DotNetEnv;
 using TreineMais.Application.Abstractions;
 
 namespace TreineMais.Infrastructure.Email;
@@ -14,12 +14,12 @@ public class SmtpEmailSender : IEmailSender
             Subject = subject,
             Body = body
         };
-        
+
         using var client = new SmtpClient("smtp.gmail.com", 587)
         {
             Credentials = new NetworkCredential(
-                userName: DotNetEnv.Env.GetString("SMTP_USER"),
-                password: DotNetEnv.Env.GetString("SMTP_PASS")
+                Env.GetString("SMTP_USER"),
+                Env.GetString("SMTP_PASS")
             ),
             EnableSsl = true,
             Timeout = 10000

@@ -1,4 +1,3 @@
-using System;
 using TreineMais.Application.Model;
 
 namespace TreineMais.Application.Exceptions;
@@ -6,15 +5,15 @@ namespace TreineMais.Application.Exceptions;
 public class GenderInvalidException : ValidationException
 {
     public GenderInvalidException(string value)
-    : base(
-        "Erro de validação.",
-        [
-            new ValidationError(
-                field: "Gender",
-                message: $"Gênero inválido: {value}"
-            )
-        ]
-    )
+        : base(
+            "Erro de validação.",
+            [
+                new ValidationError(
+                    "Gender",
+                    $"Gênero inválido: {value}"
+                )
+            ]
+        )
     {
     }
 }

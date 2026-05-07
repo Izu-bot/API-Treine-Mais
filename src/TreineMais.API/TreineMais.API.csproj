@@ -7,20 +7,19 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="DotNetEnv" Version="3.1.1" />
-        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0" />
-        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2" />
+        <PackageReference Include="DotNetEnv" Version="3.1.1"/>
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.0"/>
+        <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.2"/>
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\TreineMais.Application\TreineMais.Application.csproj" />
-      <ProjectReference Include="..\TreineMais.Domain\TreineMais.Domain.csproj" />
-      <ProjectReference Include="..\TreineMais.Infrastructure\TreineMais.Infrastructure.csproj" />
+        <ProjectReference Include="..\TreineMais.Application\TreineMais.Application.csproj"/>
+        <ProjectReference Include="..\TreineMais.Domain\TreineMais.Domain.csproj"/>
+        <ProjectReference Include="..\TreineMais.Infrastructure\TreineMais.Infrastructure.csproj"/>
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Extensions/" />
-      <Folder Include="Filter/" />
+        <Folder Include="Filter/"/>
     </ItemGroup>
 
 </Project>

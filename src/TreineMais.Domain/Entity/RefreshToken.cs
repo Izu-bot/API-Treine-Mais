@@ -4,14 +4,9 @@ namespace TreineMais.Domain.Entity;
 
 public class RefreshToken
 {
-    public Guid Id { get; private set; } = Guid.NewGuid();
-    public Guid UserId { get; private set; }
-    public string Token { get; private set; } = string.Empty;
-    public DateTime ExpiresAt { get; private set; }
-    public DateTime CreatedAt { get; private set; }
-    public DateTime? RevokedAt { get; private set; }
-    
-    private RefreshToken() { }
+    private RefreshToken()
+    {
+    }
 
     public RefreshToken(Guid userId)
     {
@@ -20,6 +15,16 @@ public class RefreshToken
         ExpiresAt = DateTime.UtcNow.AddMonths(3);
         CreatedAt = DateTime.UtcNow;
     }
+
+    public Guid Id { get; private set; } = Guid.NewGuid();
+    public Guid UserId { get; private set; }
+    public string Token { get; private set; } = string.Empty;
+    public DateTime ExpiresAt { get; }
+    public DateTime CreatedAt { get; private set; }
+    public DateTime? RevokedAt { get; private set; }
+
+    public bool IsExpired => DateTime.UtcNow >= ExpiresAt;
+    public bool IsRevoked => RevokedAt is not null;
 
     private static string GenerateRefreshToken()
     {
@@ -31,7 +36,4 @@ public class RefreshToken
     {
         RevokedAt = DateTime.UtcNow;
     }
-    
-    public bool IsExpired => DateTime.UtcNow >= ExpiresAt;
-    public bool IsRevoked => RevokedAt is not null;
 }

@@ -1,14 +1,10 @@
-
-using Microsoft.AspNetCore.Builder;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using DotNetEnv;
 using TreineMais.API.Endpoints;
 using TreineMais.API.Extensions;
 using TreineMais.Application;
 using TreineMais.Infrastructure;
 
-DotNetEnv.Env.Load();
+Env.Load();
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddEnvironmentVariables();
@@ -26,10 +22,7 @@ var app = builder.Build();
 app.UseAuthentication();
 app.UseAuthentication();
 
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
+if (app.Environment.IsDevelopment()) app.MapOpenApi();
 
 app.UseHttpsRedirection();
 

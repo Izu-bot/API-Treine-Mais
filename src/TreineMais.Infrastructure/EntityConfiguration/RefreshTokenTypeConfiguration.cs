@@ -22,10 +22,10 @@ public class RefreshTokenTypeConfiguration : IEntityTypeConfiguration<RefreshTok
         builder.Property(r => r.RevokedAt)
             .HasColumnType("timestamp with time zone")
             .IsRequired(false);
-        
+
         builder.Property(r => r.UserId)
             .IsRequired();
-        
+
         builder.HasOne<User>()
             .WithMany(u => u.RefreshTokens)
             .HasForeignKey(r => r.UserId)

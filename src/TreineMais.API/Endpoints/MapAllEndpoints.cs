@@ -1,4 +1,3 @@
-
 namespace TreineMais.API.Endpoints;
 
 internal static class MapAllEndpoints

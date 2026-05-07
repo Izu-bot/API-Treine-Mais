@@ -1,4 +1,3 @@
-using System;
 using FluentValidation;
 
 namespace TreineMais.Application.UseCase.CreateUser;

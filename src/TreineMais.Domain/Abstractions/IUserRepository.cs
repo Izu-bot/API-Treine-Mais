@@ -1,5 +1,4 @@
 using TreineMais.Domain.Entity;
-using TreineMais.Domain.ValueObject;
 
 namespace TreineMais.Domain.Abstractions;
 
