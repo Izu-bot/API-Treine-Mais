@@ -1,6 +1,7 @@
 using MediatR;
 using TreineMais.Domain.Abstractions;
 using TreineMais.Domain.Entity;
+using TreineMais.Domain.ValueObject;
 
 namespace TreineMais.Application.UseCase.Sync;
 
@@ -26,14 +27,14 @@ public class SyncHandler : IRequestHandler<SyncCommand, SyncResult>
             request.Profile.Name,
             user.Profile?.Gender,
             user.Profile?.BirthDate,
-            request.Profile.Height,
-            request.Profile.Weight,
+            new Height(request.Profile.Height),
+            new Weight(request.Profile.Weight),
             request.Profile.Goals
         );
 
         user.UpdateProfile(newProfile, request.Profile.UpdatedAt);
 
-        await _userRepository.UpdateAsync(user);
+        await _userRepository.TrackerSynchronizeAsync(user);
         return new SyncResult(true);
     }
 }

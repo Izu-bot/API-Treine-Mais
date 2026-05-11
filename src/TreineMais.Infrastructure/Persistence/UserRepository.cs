@@ -20,6 +20,11 @@ internal class UserRepository : IUserRepository
         await _context.SaveChangesAsync();
     }
 
+    public async Task TrackerSynchronizeAsync(User user)
+    {
+        await _context.SaveChangesAsync();
+    }
+
     public async Task DeleteAsync(User user)
     {
         _context.Users.Remove(user);
@@ -40,7 +45,10 @@ internal class UserRepository : IUserRepository
 
     public async Task<User?> GetByIdAsync(Guid id)
     {
-        return await _context.Users.AsNoTracking().FirstOrDefaultAsync(u => u.Id == id);
+        return await _context.Users
+            .AsNoTracking()
+            .Include(u => u.Profile)
+            .FirstOrDefaultAsync(u => u.Id == id);
     }
 
     public async Task UpdateAsync(User user)

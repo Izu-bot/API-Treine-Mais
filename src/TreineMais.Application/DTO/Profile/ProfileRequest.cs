@@ -6,5 +6,6 @@ public record ProfileRequest(
     DateTime BirthDate,
     float Height,
     float Weight,
-    string? Goals
+    string? Goals,
+    DateTime? UpdatedAt
 );
