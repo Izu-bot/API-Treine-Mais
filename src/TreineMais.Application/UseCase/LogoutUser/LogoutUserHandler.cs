@@ -20,7 +20,7 @@ public class LogoutUserHandler : IRequestHandler<LogoutUserCommand, LogoutRespon
 
         if (refreshToken == null || refreshToken.IsExpired || refreshToken.IsRevoked)
             throw new RefreshTokenRevokedOrNonExistent("Refresh token revoked");
-        
+
         await _refreshTokenRepository.Revoke(refreshToken);
 
         return new LogoutResponse(

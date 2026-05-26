@@ -1,4 +1,3 @@
-using System;
 using MediatR;
 using TreineMais.Application.DTO.Auth;
 

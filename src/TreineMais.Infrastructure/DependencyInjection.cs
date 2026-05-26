@@ -1,4 +1,4 @@
-using System;
+using DotNetEnv;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -17,11 +17,12 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddInfrastructure(this IServiceCollection services, IConfiguration configuration)
     {
-        DotNetEnv.Env.Load("../TreineMais.API/.env");
+        Env.Load("../TreineMais.API/.env");
 
         var connectionString = configuration.GetConnectionString("CONNECTION_STRING")
-        ?? DotNetEnv.Env.GetString("CONNECTION_STRING")
-        ?? throw new DatabaseConnectException("Não foi possivel se conectar com o banco de dados.");
+                               ?? Env.GetString("CONNECTION_STRING")
+                               ?? throw new DatabaseConnectException(
+                                   "Não foi possivel se conectar com o banco de dados.");
 
         services.AddDbContext<ApplicationDbContext>(options => options.UseNpgsql(connectionString));
 
@@ -29,7 +30,7 @@ public static class DependencyInjection
         services.AddSingleton<IHashPassword, HashPassword>();
         services.AddSingleton<IJwtGenerate, JwtGenerate>();
         services.AddScoped<IRefreshTokenRepository, RefreshTokenRepository>();
-        
+
         services.AddSingleton<IEmailSender, SmtpEmailSender>();
 
         return services;

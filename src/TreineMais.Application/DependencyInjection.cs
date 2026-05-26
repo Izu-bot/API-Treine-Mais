@@ -1,4 +1,3 @@
-using System;
 using System.Reflection;
 using FluentValidation;
 using MediatR;
@@ -15,7 +14,7 @@ public static class DependencyInjection
         services.AddMediatR(Assembly.GetExecutingAssembly());
 
         services.AddScoped<ConfirmEmailHandler>();
-        
+
         return services;
     }
 }

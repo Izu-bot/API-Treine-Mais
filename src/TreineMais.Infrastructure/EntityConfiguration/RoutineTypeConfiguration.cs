@@ -9,19 +9,19 @@ public class RoutineEntityConfiguration : IEntityTypeConfiguration<Routine>
     public void Configure(EntityTypeBuilder<Routine> builder)
     {
         builder.ToTable("Routines");
-        
+
         builder.HasKey(r => r.Id);
-        
+
         builder.Property(r => r.Id)
             .ValueGeneratedOnAdd();
-            
+
         builder.Property(r => r.UserId)
             .IsRequired();
-            
+
         builder.Property(r => r.Name)
             .HasMaxLength(100)
             .IsRequired();
-            
+
         builder.Property(r => r.Description)
             .HasMaxLength(500)
             .IsRequired(false);

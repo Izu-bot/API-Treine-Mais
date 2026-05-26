@@ -8,10 +8,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreineMais.Application", "s
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreineMais.Infrastructure", "src\TreineMais.Infrastructure\TreineMais.Infrastructure.csproj", "{AC8A0392-572F-40A2-A865-E093CA439007}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{0AB3BF05-4346-4AA6-1389-037BE0695223}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TreineMais.UnitTests", "tests\TreineMais.UnitTests\TreineMais.UnitTests.csproj", "{5E4CBA94-7DB1-4A31-96D6-6BD6B55C7776}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU

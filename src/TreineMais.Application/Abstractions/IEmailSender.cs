@@ -1,5 +1,3 @@
-using System;
-
 namespace TreineMais.Application.Abstractions;
 
 public interface IEmailSender

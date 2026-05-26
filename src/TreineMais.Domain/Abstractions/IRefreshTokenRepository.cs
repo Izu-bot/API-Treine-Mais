@@ -1,4 +1,3 @@
-using System.ComponentModel;
 using TreineMais.Domain.Entity;
 
 namespace TreineMais.Domain.Abstractions;

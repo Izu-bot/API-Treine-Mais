@@ -14,14 +14,15 @@ namespace TreineMais.Application.UseCase.CreateUser;
 
 public class CreateUserHandler : IRequestHandler<CreateUserCommand, UserResponse>
 {
-    private readonly IUserRepository _repository;
     private readonly IEmailSender _emailSender;
     private readonly IHashPassword _hashPassword;
+    private readonly IUserRepository _repository;
     private readonly IValidator<CreateUserCommand> _validator;
+
     public CreateUserHandler(IUserRepository repository,
-                             IHashPassword hashPassword,
-                             IValidator<CreateUserCommand> validator,
-                             IEmailSender emailSender)
+        IHashPassword hashPassword,
+        IValidator<CreateUserCommand> validator,
+        IEmailSender emailSender)
     {
         _repository = repository;
         _hashPassword = hashPassword;
@@ -41,7 +42,7 @@ public class CreateUserHandler : IRequestHandler<CreateUserCommand, UserResponse
         Login login = new(email, hashedPassword);
 
         var user = new User(login);
-        
+
         if (!Enum.TryParse<Gender>(request.Gender, true, out var gender))
             throw new GenderInvalidException(request.Gender);
 
@@ -63,7 +64,7 @@ public class CreateUserHandler : IRequestHandler<CreateUserCommand, UserResponse
             $"Clique no link para confirmar {link}"
         );
 
-        user.UpdateProfile(profile);
+        user.CreateProfile(profile);
 
         await _repository.CreateAsync(user);
 

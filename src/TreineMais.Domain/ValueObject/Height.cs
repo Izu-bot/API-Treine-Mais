@@ -4,8 +4,6 @@ namespace TreineMais.Domain.ValueObject;
 
 public class Height
 {
-    public float Value { get; }
-
     public Height(float value)
     {
         if (value < 0)
@@ -15,7 +13,9 @@ public class Height
 
         Value = value;
     }
-    
+
+    public float Value { get; }
+
 
     public override string ToString()
     {

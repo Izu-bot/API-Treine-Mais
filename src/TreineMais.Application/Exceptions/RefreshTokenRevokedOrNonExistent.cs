@@ -4,13 +4,13 @@ namespace TreineMais.Application.Exceptions;
 
 public class RefreshTokenRevokedOrNonExistent : ValidationException
 {
-    public RefreshTokenRevokedOrNonExistent(string message) 
+    public RefreshTokenRevokedOrNonExistent(string message)
         : base(message,
-            [
+        [
             new ValidationError(
-                field: "RefreshToken",
-                message: message)
-            ])
+                "RefreshToken",
+                message)
+        ])
     {
     }
 }

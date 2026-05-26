@@ -14,11 +14,11 @@ public static class ValidationHelper
         {
             var errors = result.Errors
                 .Select(e => new ValidationError(
-                    e.PropertyName,
-                    e.ErrorMessage
-                )
-            );
-            
+                        e.PropertyName,
+                        e.ErrorMessage
+                    )
+                );
+
             throw new FluentValidationException(errors);
         }
     }

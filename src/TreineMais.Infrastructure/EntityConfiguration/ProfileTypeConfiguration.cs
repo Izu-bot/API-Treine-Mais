@@ -35,11 +35,15 @@ internal class ProfileTypeConfiguration : IEntityTypeConfiguration<Profile>
                 .HasColumnType("numeric(5,2)")
                 .HasColumnName("Weight");
         });
-        
+
         builder.Navigation(p => p.Weight).IsRequired(false);
-        
+
         builder.Property(p => p.Goals)
             .HasColumnType("varchar(300)")
+            .IsRequired(false);
+
+        builder.Property(p => p.UpdatedAt)
+            .HasColumnType("timestamp with time zone")
             .IsRequired(false);
     }
 }

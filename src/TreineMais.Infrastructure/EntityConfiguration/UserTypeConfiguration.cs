@@ -39,6 +39,10 @@ internal class UserTypeConfiguration : IEntityTypeConfiguration<User>
             .HasColumnType("timestamp with time zone")
             .IsRequired(false);
 
+        builder.Property(u => u.UpdatedAt)
+            .HasColumnType("timestamp with time zone")
+            .IsRequired(false);
+
         builder.HasOne(u => u.Profile)
             .WithOne(p => p.User)
             .HasForeignKey<Profile>(p => p.UserId)
