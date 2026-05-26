@@ -9,11 +9,12 @@ namespace TreineMais.API.Endpoints;
 
 internal static class SyncEndpoint
 {
-    internal static IEndpointRouteBuilder MapSync(IEndpointRouteBuilder endpoint)
+    internal static IEndpointRouteBuilder MapSyncEndpoint(this IEndpointRouteBuilder app)
     {
-        endpoint.MapPost("/sync", Sync);
+        app.MapPost("/sync", Sync)
+            .RequireAuthorization();
 
-        return endpoint;
+        return app;
     }
 
     private static async Task<IResult> Sync(
