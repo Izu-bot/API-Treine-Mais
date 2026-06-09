@@ -1,5 +1,5 @@
 using MediatR;
-using TreineMais.Application.DTO.Auth;
+using TreineMais.Application.Responses.Auth;
 
 namespace TreineMais.Application.UseCase.LoginUser;
 

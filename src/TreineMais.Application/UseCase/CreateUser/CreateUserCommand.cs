@@ -1,5 +1,5 @@
 using MediatR;
-using TreineMais.Application.DTO.User;
+using TreineMais.Application.Responses.User;
 
 namespace TreineMais.Application.UseCase.CreateUser;
 

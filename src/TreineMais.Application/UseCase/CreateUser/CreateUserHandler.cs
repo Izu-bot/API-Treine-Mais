@@ -1,10 +1,10 @@
 using FluentValidation;
 using MediatR;
 using TreineMais.Application.Abstractions;
-using TreineMais.Application.DTO.Profile;
-using TreineMais.Application.DTO.User;
 using TreineMais.Application.Exceptions;
 using TreineMais.Application.Helpers;
+using TreineMais.Application.Responses.Profile;
+using TreineMais.Application.Responses.User;
 using TreineMais.Application.Security;
 using TreineMais.Domain.Abstractions;
 using TreineMais.Domain.Entity;

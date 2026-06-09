@@ -1,7 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using TreineMais.API.Requests.Profile;
 using TreineMais.API.Utils;
-using TreineMais.Application.DTO.Profile;
 using TreineMais.Application.UseCase.Sync;
 using TreineMais.Application.UseCase.Sync.DTOs;
 

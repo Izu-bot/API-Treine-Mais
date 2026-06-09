@@ -1,7 +1,7 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using TreineMais.Application.DTO.Auth;
-using TreineMais.Application.DTO.User;
+using TreineMais.API.Requests.Auth;
+using TreineMais.API.Requests.User;
 using TreineMais.Application.UseCase.ConfirmEmail;
 using TreineMais.Application.UseCase.ConfirmRefreshToken;
 using TreineMais.Application.UseCase.CreateUser;
