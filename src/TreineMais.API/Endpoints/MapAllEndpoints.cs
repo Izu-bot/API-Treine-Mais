@@ -6,6 +6,7 @@ internal static class MapAllEndpoints
     {
         app.MapAuthEndpoints();
         app.MapSyncEndpoint();
+        app.MapTrainingEndpoint();
 
         return app;
     }
