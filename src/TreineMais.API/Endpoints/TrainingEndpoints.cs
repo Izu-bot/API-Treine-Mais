@@ -1,8 +1,9 @@
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using Sprache;
 using TreineMais.API.Requests.Training;
+using TreineMais.API.Requests.TrainingExercise;
 using TreineMais.API.Utils;
+using TreineMais.Application.UseCase.AddExercise;
 using TreineMais.Application.UseCase.AddTraining;
 
 namespace TreineMais.API.Endpoints;
@@ -14,6 +15,7 @@ internal static class TrainingEndpoints
         var group = app.MapGroup("training");
         
         group.MapPost("/create-training", CreateTraining);
+        group.MapPost("/add-exercise", AddExerciseToTraining);
         
         return app;
     }
@@ -36,5 +38,23 @@ internal static class TrainingEndpoints
         var result = await mediator.Send(command);
         
         return Results.Created($"training/{result.Id}", result);
+    }
+
+    private static async Task<IResult> AddExerciseToTraining(
+        [FromBody] TrainingExerciseRequest request,
+        [FromServices] IMediator mediator)
+    {
+        var command = new AddExerciseToTrainingCommand
+        {
+            ExerciseId = request.ExerciseId,
+            TrainingId = request.TrainingId,
+            Sets = request.Sets,
+            Reps = request.Reps,
+            Weight = request.Weight
+        };
+        
+        var result = await mediator.Send(command);
+        
+        return Results.Created($"training/{result.ExerciseId}", result);
     }
 }
