@@ -329,9 +329,6 @@ namespace TreineMais.Infrastructure.Migrations
 
                             NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b1.Property<int>("Id"));
 
-                            b1.Property<int>("TrainingId")
-                                .HasColumnType("integer");
-
                             b1.Property<int>("ExerciseId")
                                 .HasColumnType("integer");
 
@@ -341,7 +338,10 @@ namespace TreineMais.Infrastructure.Migrations
                             b1.Property<int>("Sets")
                                 .HasColumnType("integer");
 
-                            b1.HasKey("Id", "TrainingId");
+                            b1.Property<int>("TrainingId")
+                                .HasColumnType("integer");
+
+                            b1.HasKey("Id");
 
                             b1.HasIndex("ExerciseId");
 
@@ -363,19 +363,16 @@ namespace TreineMais.Infrastructure.Migrations
                                     b2.Property<int>("TrainingExerciseId")
                                         .HasColumnType("integer");
 
-                                    b2.Property<int>("TrainingExerciseTrainingId")
-                                        .HasColumnType("integer");
-
                                     b2.Property<float>("Value")
                                         .HasColumnType("real")
                                         .HasColumnName("WeightValue");
 
-                                    b2.HasKey("TrainingExerciseId", "TrainingExerciseTrainingId");
+                                    b2.HasKey("TrainingExerciseId");
 
                                     b2.ToTable("TrainingExercises");
 
                                     b2.WithOwner()
-                                        .HasForeignKey("TrainingExerciseId", "TrainingExerciseTrainingId");
+                                        .HasForeignKey("TrainingExerciseId");
                                 });
 
                             b1.Navigation("Weight")

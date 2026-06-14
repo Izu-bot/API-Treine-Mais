@@ -4,8 +4,6 @@ namespace TreineMais.Domain.Entity;
 
 public class Training
 {
-    private readonly List<TrainingExercise> _exercises = new();
-
     private Training()
     {
     }
@@ -23,6 +21,8 @@ public class Training
     public string Name { get; private set; } = null!;
     public string? Description { get; private set; }
     public DateTime Date { get; private set; }
+    
+    private readonly List<TrainingExercise> _exercises = new();
     public IReadOnlyList<TrainingExercise> Exercises => _exercises.AsReadOnly();
 
     public void UpdateName(string name)
@@ -93,6 +93,7 @@ public class TrainingExercise
         Weight = weight;
     }
 
+    public int Id { get; private set; }
     public int ExerciseId { get; private set; }
     public int Sets { get; private set; }
     public int Reps { get; private set; }

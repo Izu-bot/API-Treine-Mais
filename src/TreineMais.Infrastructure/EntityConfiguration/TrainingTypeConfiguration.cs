@@ -36,6 +36,7 @@ public class TrainingEntityConfiguration : IEntityTypeConfiguration<Training>
             .OnDelete(DeleteBehavior.Cascade);
 
         // Relacionamento com TrainingExercise (Owned Collection)
+        
         builder.OwnsMany(t => t.Exercises, teBuilder =>
         {
             teBuilder.ToTable("TrainingExercises");
@@ -43,7 +44,11 @@ public class TrainingEntityConfiguration : IEntityTypeConfiguration<Training>
             teBuilder.WithOwner()
                 .HasForeignKey("TrainingId");
 
-            teBuilder.HasKey("Id", "TrainingId");
+            // Chave simples agora que Id está na classe
+            teBuilder.HasKey(te => te.Id);
+
+            teBuilder.Property(te => te.Id)
+                .ValueGeneratedOnAdd();
 
             teBuilder.Property(te => te.ExerciseId)
                 .IsRequired();
@@ -65,9 +70,6 @@ public class TrainingEntityConfiguration : IEntityTypeConfiguration<Training>
                 .WithMany()
                 .HasForeignKey(te => te.ExerciseId)
                 .OnDelete(DeleteBehavior.Restrict);
-
-            teBuilder.Property<int>("Id")
-                .ValueGeneratedOnAdd();
         });
 
         builder.HasIndex(t => t.UserId);
