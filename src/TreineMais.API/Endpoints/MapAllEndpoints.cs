@@ -7,6 +7,7 @@ internal static class MapAllEndpoints
         app.MapAuthEndpoints();
         app.MapSyncEndpoint();
         app.MapTrainingEndpoint();
+        app.MapExerciseEndpoint();
 
         return app;
     }
