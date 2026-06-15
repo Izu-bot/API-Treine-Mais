@@ -62,10 +62,13 @@ internal static class TrainingEndpoints
 
     private static async Task<IResult> GetAllTrainings(
         [FromServices] IMediator mediator,
+        HttpContext httpContext,
         [FromQuery] int page = 1,
         [FromQuery] int pageSize = 10)
     {
-        var result = await mediator.Send(new GetAllTrainingsQuery(page, pageSize));
+        var userId = httpContext.User.GetUserId();
+        
+        var result = await mediator.Send(new GetAllTrainingsQuery(userId, page, pageSize));
         
         return Results.Ok(result);
     }

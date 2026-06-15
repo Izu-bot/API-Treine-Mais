@@ -8,5 +8,5 @@ public interface ITrainingRepository
     Task RemoveTrainingAsync(Training training);
     Task UpdateTrainingAsync(Training training);
     Task<Training?> GetTrainingByIdAsync(int id);
-    Task<(IEnumerable<Training>, int totalCount)> GetAllTrainingsAsync(int page, int pageSize);
+    Task<(IEnumerable<Training>, int totalCount)> GetAllTrainingsAsync(int page, int pageSize, Guid userId);
 }

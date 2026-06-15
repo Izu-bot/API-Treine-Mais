@@ -39,9 +39,11 @@ internal class TrainingRepository : ITrainingRepository
             .FirstOrDefaultAsync(t => t.Id == id);
     }
 
-    public async Task<(IEnumerable<Training>, int totalCount)> GetAllTrainingsAsync(int page, int pageSize)
+    public async Task<(IEnumerable<Training>, int totalCount)> GetAllTrainingsAsync(int page, int pageSize, Guid userId)
     {
-        var query = _dbContext.Trainings.AsNoTracking();
+        var query = _dbContext.Trainings
+            .AsNoTracking()
+            .Where(t => t.UserId == userId);
 
         var totalCount = await query.CountAsync();
 
