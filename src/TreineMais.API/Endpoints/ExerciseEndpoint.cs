@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 using TreineMais.API.Requests.Exercise;
 using TreineMais.API.Utils;
 using TreineMais.Application.UseCase.CreateExercise;
+using TreineMais.Application.UseCase.GetAllExercises;
 
 namespace TreineMais.API.Endpoints;
 
@@ -13,6 +14,7 @@ public static class ExerciseEndpoint
         var group = app.MapGroup("exercises");
 
         group.MapPost("/create-exercise", CreateExercise);
+        group.MapGet("/all-exercises", GetAllExercises);
         
         return app;
     }
@@ -35,5 +37,18 @@ public static class ExerciseEndpoint
         var result = await mediator.Send(command);
         
         return Results.Created($"/exercise/{result.ExerciseId}", result);
+    }
+
+    private static async Task<IResult> GetAllExercises(
+        [FromServices] IMediator mediator,
+        HttpContext httpContext,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 10)
+    {
+        var userId = httpContext.User.GetUserId();
+        
+        var result = await mediator.Send(new GetAllExercisesQuery(userId, page, pageSize));
+        
+        return Results.Ok(result);
     }
 }
