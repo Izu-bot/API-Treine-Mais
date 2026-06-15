@@ -1,4 +1,4 @@
-namespace TreineMais.Application.DTO.Profile;
+namespace TreineMais.Application.Responses.Profile;
 
 public record ProfileResponse(
     string Name,

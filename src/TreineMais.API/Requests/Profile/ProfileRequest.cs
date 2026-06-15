@@ -1,4 +1,4 @@
-namespace TreineMais.Application.DTO.Profile;
+namespace TreineMais.API.Requests.Profile;
 
 public record ProfileRequest(
     string Name,

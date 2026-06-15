@@ -1,6 +1,6 @@
 using MediatR;
-using TreineMais.Application.DTO.Auth;
 using TreineMais.Application.Exceptions;
+using TreineMais.Application.Responses.Auth;
 using TreineMais.Application.Security;
 using TreineMais.Domain.Abstractions;
 using TreineMais.Domain.Entity;

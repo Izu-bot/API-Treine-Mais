@@ -73,10 +73,10 @@ public class User
 
     public void UpdateProfile(Profile? profile, DateTime? updateFromMobile)
     {
-        if (updateFromMobile.HasValue && updateFromMobile.Value > DateTime.UtcNow) 
+        if (updateFromMobile.HasValue && updateFromMobile.Value > DateTime.UtcNow)
             throw new UserException("Timestamp funturo não é válido");
-        
-        if (updateFromMobile.HasValue && UpdatedAt.HasValue && updateFromMobile <= UpdatedAt) 
+
+        if (updateFromMobile.HasValue && UpdatedAt.HasValue && updateFromMobile <= UpdatedAt)
             return;
 
         if (Profile is null)
