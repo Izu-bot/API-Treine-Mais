@@ -4,7 +4,7 @@ using TreineMais.Application.Responses.Training;
 
 namespace TreineMais.Application.UseCase.GetAllTrainings;
 
-public record GetAllTrainingsQuery(int Page = 1, int PageSize = 10)
+public record GetAllTrainingsQuery(Guid UserId, int Page = 1, int PageSize = 10)
     : IRequest<PagedResult<TrainingWithExerciseResponse>>
 {
     public int Page { get; init; } = Math.Max(1, Page);

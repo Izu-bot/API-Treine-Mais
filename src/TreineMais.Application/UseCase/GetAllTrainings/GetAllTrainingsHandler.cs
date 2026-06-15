@@ -9,15 +9,20 @@ namespace TreineMais.Application.UseCase.GetAllTrainings;
 public class GetAllTrainingsHandler : IRequestHandler<GetAllTrainingsQuery, PagedResult<TrainingWithExerciseResponse>>
 {
     private readonly ITrainingRepository _trainingRepository;
+    private readonly IUserRepository _userRepository;
 
-    public GetAllTrainingsHandler(ITrainingRepository trainingRepository)
+    public GetAllTrainingsHandler(ITrainingRepository trainingRepository, IUserRepository userRepository)
     {
         _trainingRepository = trainingRepository;
+        _userRepository = userRepository;
     }
     
     public async Task<PagedResult<TrainingWithExerciseResponse>> Handle(GetAllTrainingsQuery request, CancellationToken cancellationToken)
     {
-        var (allTrainings, totalCount) = await _trainingRepository.GetAllTrainingsAsync(request.Page, request.PageSize);
+        var userId = await _userRepository.GetByIdAsync(request.UserId)
+            ?? throw new ArgumentException( $"{nameof(request.UserId)} Usuário não encontrado");
+        
+        var (allTrainings, totalCount) = await _trainingRepository.GetAllTrainingsAsync(request.Page, request.PageSize, userId.Id);
 
         var items = allTrainings
             .Select(t => new TrainingWithExerciseResponse(
