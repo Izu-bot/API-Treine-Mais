@@ -5,6 +5,7 @@ using TreineMais.API.Requests.TrainingExercise;
 using TreineMais.API.Utils;
 using TreineMais.Application.UseCase.AddExercise;
 using TreineMais.Application.UseCase.AddTraining;
+using TreineMais.Application.UseCase.GetAllTrainings;
 
 namespace TreineMais.API.Endpoints;
 
@@ -16,6 +17,7 @@ internal static class TrainingEndpoints
         
         group.MapPost("/create-training", CreateTraining);
         group.MapPost("/add-exercise", AddExerciseToTraining);
+        group.MapGet("/all-trainings", GetAllTrainings);
         
         return app;
     }
@@ -56,5 +58,15 @@ internal static class TrainingEndpoints
         var result = await mediator.Send(command);
         
         return Results.Created($"training/{result.ExerciseId}", result);
+    }
+
+    private static async Task<IResult> GetAllTrainings(
+        [FromServices] IMediator mediator,
+        [FromQuery] int page = 1,
+        [FromQuery] int pageSize = 10)
+    {
+        var result = await mediator.Send(new GetAllTrainingsQuery(page, pageSize));
+        
+        return Results.Ok(result);
     }
 }
