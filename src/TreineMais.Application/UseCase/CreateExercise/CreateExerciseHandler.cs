@@ -29,7 +29,7 @@ public class CreateExerciseHandler : IRequestHandler<CreateExerciseCommand, Exer
         await ValidationHelper.ValidateAndThrowAsync(_validator, request);
 
         var userId = await _userRepository.GetByIdAsync(request.UserId)
-            ?? throw new NotFoundException($"Usuário não encontrado na base de dados.");
+            ?? throw new NotFoundException($"Usuário com ID {request.UserId} não foi encontrado.");
         
         Exercise exercise = new(
             userId.Id,

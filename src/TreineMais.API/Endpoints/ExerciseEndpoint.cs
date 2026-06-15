@@ -36,7 +36,7 @@ public static class ExerciseEndpoint
         
         var result = await mediator.Send(command);
         
-        return Results.Created($"/exercise/{result.ExerciseId}", result);
+        return Results.Created($"exercise/{result.ExerciseId}", result);
     }
 
     private static async Task<IResult> GetAllExercises(

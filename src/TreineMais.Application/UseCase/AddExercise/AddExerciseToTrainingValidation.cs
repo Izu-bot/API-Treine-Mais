@@ -11,10 +11,10 @@ public class AddExerciseToTrainingValidation : AbstractValidator<AddExerciseToTr
             .GreaterThan(0)
             .WithMessage("Você deve associar á um Treino.");
         
-        RuleFor(command => command.TrainingId)
+        RuleFor(command => command.ExerciseId)
             .NotEmpty()
             .GreaterThan(0)
-            .WithMessage("Um exercício existênte é obrigátorio");
+            .WithMessage("Um exercício existente é obrigatório");
 
         RuleFor(command => command.Sets)
             .NotEmpty()

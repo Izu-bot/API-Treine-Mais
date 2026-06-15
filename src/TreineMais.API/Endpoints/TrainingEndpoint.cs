@@ -9,7 +9,7 @@ using TreineMais.Application.UseCase.GetAllTrainings;
 
 namespace TreineMais.API.Endpoints;
 
-internal static class TrainingEndpoints
+internal static class TrainingEndpoint
 {
     internal static IEndpointRouteBuilder MapTrainingEndpoint(this IEndpointRouteBuilder app)
     {
